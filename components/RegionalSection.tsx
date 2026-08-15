@@ -1,0 +1,81 @@
+'use client';
+
+import { useMemo, useState } from 'react';
+import { EventGrid } from './EventGrid';
+import { availableCountries } from '@/lib/filters';
+import type { SGEvent } from '@/lib/types';
+
+/**
+ * Southeast Asia festivals outside Singapore.
+ *
+ * Deliberately its own block with its own country filter, so it never mixes
+ * into the Singapore listings above.
+ */
+export function RegionalSection({ events }: { events: SGEvent[] }) {
+  const [country, setCountry] = useState<string | null>(null);
+
+  const countries = useMemo(() => availableCountries(events), [events]);
+  const visible = useMemo(
+    () => (country ? events.filter((event) => event.country === country) : events),
+    [events, country],
+  );
+
+  if (events.length === 0) return null;
+
+  return (
+    <section id="regional" className="scroll-mt-24">
+      <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+        <div className="max-w-2xl">
+          <p className="text-[0.7rem] font-semibold tracking-[0.2em] text-coral uppercase">
+            Worth the flight
+          </p>
+          <h2 className="font-display mt-3 text-[length:var(--text-section)] leading-[0.95] font-bold tracking-tighter text-balance">
+            Southeast Asia festivals
+          </h2>
+          <p className="mt-4 text-base text-muted">
+            The regional heavyweights, all within a short-haul hop of Changi. December is the
+            season — three of the biggest land inside two weeks of each other.
+          </p>
+        </div>
+
+        <div
+          role="group"
+          aria-label="Filter festivals by country"
+          className="-mx-1 flex gap-2 overflow-x-auto px-1 pb-1"
+        >
+          <button
+            type="button"
+            onClick={() => setCountry(null)}
+            aria-pressed={country === null}
+            className={`shrink-0 rounded-full border px-4 py-2 text-sm font-semibold whitespace-nowrap transition-all duration-300 ${
+              country === null
+                ? 'border-transparent bg-gradient-to-r from-amber via-coral to-violet text-white'
+                : 'border-hairline bg-white/4 text-muted hover:border-white/22 hover:text-cream'
+            }`}
+          >
+            All
+          </button>
+          {countries.map((name) => (
+            <button
+              key={name}
+              type="button"
+              onClick={() => setCountry(name)}
+              aria-pressed={country === name}
+              className={`shrink-0 rounded-full border px-4 py-2 text-sm font-semibold whitespace-nowrap transition-all duration-300 ${
+                country === name
+                  ? 'border-transparent bg-gradient-to-r from-amber via-coral to-violet text-white'
+                  : 'border-hairline bg-white/4 text-muted hover:border-white/22 hover:text-cream'
+              }`}
+            >
+              {name}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="mt-10">
+        <EventGrid events={visible} emptyMessage="No festivals listed there yet." />
+      </div>
+    </section>
+  );
+}

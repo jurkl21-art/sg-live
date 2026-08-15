@@ -1,0 +1,195 @@
+@import 'tailwindcss';
+
+/* ==========================================================================
+   SG LIVE — DESIGN TOKENS
+   Tailwind v4 is configured here in CSS rather than in a JS config file.
+   ========================================================================== */
+@theme {
+  /* Base surfaces — near-black, warm rather than blue-black. */
+  --color-ink: #08070b;
+  --color-ink-raised: #100e17;
+  --color-ink-card: #14121d;
+  --color-hairline: rgba(255, 255, 255, 0.09);
+
+  /* Type */
+  --color-cream: #f6f2ef;
+  --color-muted: #a9a2b8;
+  --color-faint: #6f6883;
+
+  /* Sunset accent ramp */
+  --color-amber: #ff8a3d;
+  --color-coral: #ff3d77;
+  --color-violet: #7b2fff;
+  --color-mint: #2fd9c5;
+
+  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  /* Fluid display sizes — clamp so mobile never overflows. */
+  --text-hero: clamp(2.75rem, 11vw, 7.5rem);
+  --text-section: clamp(1.85rem, 5.5vw, 3.25rem);
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   BASE
+   ========================================================================== */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-ink);
+    color: var(--color-cream);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    /* The page commits to a dark treatment; tell the UA so form controls and
+       scrollbars match rather than flashing white. */
+    color-scheme: dark;
+  }
+
+  /* Visible, on-brand focus for keyboard users only. */
+  :focus-visible {
+    outline: 2px solid var(--color-coral);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background: var(--color-coral);
+    color: #fff;
+  }
+}
+
+/* ==========================================================================
+   UTILITIES
+   ========================================================================== */
+@utility font-display {
+  font-family: var(--font-display);
+}
+
+/* Film-grain overlay. Inline SVG turbulence — no network request, and it stops
+   the large flat gradients reading as cheap CSS. */
+@utility grain {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.42;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  }
+}
+
+/* Gradient-filled text for headline accents. */
+@utility text-sunset {
+  background-image: linear-gradient(
+    100deg,
+    var(--color-amber) 0%,
+    var(--color-coral) 48%,
+    var(--color-violet) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Hides content visually but keeps it for screen readers. */
+@utility sr-only-focusable {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip-path: none;
+    white-space: normal;
+  }
+}
+
+/* ==========================================================================
+   MOTION
+   Reveal-on-scroll is driven by `useReveal`, which adds [data-revealed].
+   ========================================================================== */
+@layer components {
+  /* Scoped to [data-reveal-ready], which `useReveal` sets only once it has an
+     observer running. Without it these elements stay visible — the animation is
+     an enhancement and must never be what makes content appear. */
+  [data-reveal-ready] [data-reveal] {
+    opacity: 0;
+    transform: translateY(22px);
+    transition:
+      opacity 0.7s var(--ease-out-expo),
+      transform 0.7s var(--ease-out-expo);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  [data-reveal-ready] [data-reveal][data-revealed='true'] {
+    opacity: 1;
+    transform: none;
+  }
+
+  @keyframes drift {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+    50% {
+      transform: translate3d(2%, -3%, 0) scale(1.08);
+    }
+  }
+
+  .animate-drift {
+    animation: drift 22s ease-in-out infinite;
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 38s linear infinite;
+  }
+}
+
+/* Single global kill switch. Anything animated above stops here. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  [data-reveal-ready] [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
