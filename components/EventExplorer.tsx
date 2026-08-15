@@ -3,11 +3,13 @@
 import { useId, useMemo, useState } from 'react';
 import { EventGrid } from './EventGrid';
 import { FilterBar } from './FilterBar';
+import { ViewToggle } from './ViewToggle';
 import {
   availableTags,
   filterEvents,
   tagCounts as computeTagCounts,
 } from '@/lib/filters';
+import { useViewMode } from '@/lib/useViewMode';
 import type { DateBucket, EventKind, EventTag, SGEvent } from '@/lib/types';
 
 interface EventExplorerProps {
@@ -41,6 +43,7 @@ export function EventExplorer({ events, todayISO }: EventExplorerProps) {
   const [selectedTags, setSelectedTags] = useState<EventTag[]>([]);
   const [dateBucket, setDateBucket] = useState<DateBucket>('all');
   const [query, setQuery] = useState('');
+  const [viewMode, setViewMode] = useViewMode();
 
   const searchId = useId();
 
@@ -122,9 +125,13 @@ export function EventExplorer({ events, todayISO }: EventExplorerProps) {
       </div>
 
       <div className="mt-10">
+        <div className="mb-6 flex items-center justify-end">
+          <ViewToggle value={viewMode} onChange={setViewMode} />
+        </div>
         <EventGrid
           events={visible}
           groupByMonth
+          viewMode={viewMode}
           emptyMessage={
             query
               ? `No ${active.label.toLowerCase()} events match “${query}”.`

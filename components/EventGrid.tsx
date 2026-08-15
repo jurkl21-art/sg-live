@@ -3,20 +3,44 @@
 import { EventCard } from './EventCard';
 import { useReveal } from '@/lib/useReveal';
 import { formatMonthYear, monthKey } from '@/lib/dates';
-import type { SGEvent } from '@/lib/types';
+import type { SGEvent, ViewMode } from '@/lib/types';
 
 interface EventGridProps {
   events: SGEvent[];
   /** Break the grid into month sections. Off for the shorter regional block. */
   groupByMonth?: boolean;
   emptyMessage?: string;
+  viewMode?: ViewMode;
 }
 
-function Grid({ events, offset = 0 }: { events: SGEvent[]; offset?: number }) {
+const GRID_CLASSES: Record<'large' | 'small', string> = {
+  large: 'grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3',
+  small: 'grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4 xl:grid-cols-5',
+};
+
+function Grid({
+  events,
+  offset = 0,
+  viewMode,
+}: {
+  events: SGEvent[];
+  offset?: number;
+  viewMode: ViewMode;
+}) {
+  if (viewMode === 'list') {
+    return (
+      <div className="divide-y divide-hairline overflow-hidden rounded-2xl border border-hairline">
+        {events.map((event, index) => (
+          <EventCard key={event.id} event={event} index={offset + index} variant="list" />
+        ))}
+      </div>
+    );
+  }
+
   return (
-    <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    <div className={GRID_CLASSES[viewMode]}>
       {events.map((event, index) => (
-        <EventCard key={event.id} event={event} index={offset + index} />
+        <EventCard key={event.id} event={event} index={offset + index} variant={viewMode} />
       ))}
     </div>
   );
@@ -26,10 +50,12 @@ export function EventGrid({
   events,
   groupByMonth = false,
   emptyMessage = 'Nothing matches those filters yet.',
+  viewMode = 'large',
 }: EventGridProps) {
-  // Re-run the observer setup whenever the visible set changes, so cards added
-  // by a filter change get picked up too.
-  const containerRef = useReveal<HTMLDivElement>(events);
+  // Re-run the observer setup whenever the visible set OR the layout changes —
+  // switching view mode swaps in a differently-shaped card/row tree, and those
+  // freshly mounted [data-reveal] elements need to be (re-)observed too.
+  const containerRef = useReveal<HTMLDivElement>([viewMode, events]);
 
   if (events.length === 0) {
     return (
@@ -46,7 +72,7 @@ export function EventGrid({
   if (!groupByMonth) {
     return (
       <div ref={containerRef}>
-        <Grid events={events} />
+        <Grid events={events} viewMode={viewMode} />
       </div>
     );
   }
@@ -82,7 +108,7 @@ export function EventGrid({
                 {monthEvents.length} {monthEvents.length === 1 ? 'event' : 'events'}
               </span>
             </div>
-            <Grid events={monthEvents} offset={offset} />
+            <Grid events={monthEvents} offset={offset} viewMode={viewMode} />
           </section>
         );
       })}

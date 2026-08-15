@@ -103,6 +103,9 @@ export type SGEvent = MusicEvent | SportsEvent;
 /** Date buckets offered by the date filter. */
 export type DateBucket = 'all' | 'this-month' | 'next-3-months' | 'later';
 
+/** Card density for the events grid — how much detail each event shows. */
+export type ViewMode = 'large' | 'small' | 'list';
+
 /** Every tag on an event, regardless of kind. */
 export function tagsOf(event: SGEvent): EventTag[] {
   return event.kind === 'music' ? event.genres : event.categories;
@@ -144,4 +147,10 @@ export const DATE_BUCKET_LABELS: Record<DateBucket, string> = {
   'this-month': 'This month',
   'next-3-months': 'Next 3 months',
   later: 'Later',
+};
+
+export const VIEW_MODE_LABELS: Record<ViewMode, string> = {
+  large: 'Large thumbnails',
+  small: 'Small thumbnails',
+  list: 'List view',
 };
