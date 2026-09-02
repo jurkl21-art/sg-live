@@ -6,10 +6,10 @@ import { availableCountries } from '@/lib/filters';
 import type { SGEvent } from '@/lib/types';
 
 /**
- * Southeast Asia festivals outside Singapore.
- *
- * Deliberately its own block with its own country filter, so it never mixes
- * into the Singapore listings above.
+ * Southeast Asia festivals outside Singapore — the content behind the
+ * Regional tab in `SingaporeAndRegional`. Deliberately its own block with
+ * its own country filter (no tag/date filtering), so it never mixes with
+ * the Singapore Music/Sport sections.
  */
 export function RegionalSection({ events }: { events: SGEvent[] }) {
   const [country, setCountry] = useState<string | null>(null);
@@ -19,8 +19,6 @@ export function RegionalSection({ events }: { events: SGEvent[] }) {
     () => (country ? events.filter((event) => event.country === country) : events),
     [events, country],
   );
-
-  if (events.length === 0) return null;
 
   return (
     <section id="regional" className="scroll-mt-24">
