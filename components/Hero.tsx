@@ -24,7 +24,7 @@ export function Hero({ headliners, totalEvents, lastUpdated }: HeroProps) {
         <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-ink to-transparent" />
       </div>
 
-      <div className="mx-auto max-w-7xl px-5 pt-10 pb-16 sm:px-8 sm:pt-14 sm:pb-24">
+      <div className="mx-auto max-w-7xl px-5 pt-10 pb-8 sm:px-8 sm:pt-14 sm:pb-10">
         {/* Brand */}
         <div className="flex items-center justify-between gap-4">
           <Link href="/" className="font-display text-lg font-bold tracking-tight">

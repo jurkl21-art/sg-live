@@ -31,7 +31,7 @@ export default function HomePage() {
         lastUpdated={LAST_UPDATED}
       />
 
-      <main id="main" className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28">
+      <main id="main" className="mx-auto max-w-7xl px-5 pt-10 pb-20 sm:px-8 sm:pt-14 sm:pb-28">
         <EventExplorer events={singapore} todayISO={todayISO} />
 
         <hr className="my-24 border-hairline sm:my-32" />
