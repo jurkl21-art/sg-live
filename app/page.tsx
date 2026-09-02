@@ -1,7 +1,6 @@
-import { EventExplorer } from '@/components/EventExplorer';
 import { Footer } from '@/components/Footer';
 import { Hero } from '@/components/Hero';
-import { RegionalSection } from '@/components/RegionalSection';
+import { SingaporeAndRegional } from '@/components/SingaporeAndRegional';
 import { LAST_UPDATED, events } from '@/data/events';
 import { todayInSingapore } from '@/lib/dates';
 import { getUpcoming } from '@/lib/filters';
@@ -32,11 +31,7 @@ export default function HomePage() {
       />
 
       <main id="main" className="mx-auto max-w-7xl px-5 pt-10 pb-20 sm:px-8 sm:pt-14 sm:pb-28">
-        <EventExplorer events={singapore} todayISO={todayISO} />
-
-        <hr className="my-24 border-hairline sm:my-32" />
-
-        <RegionalSection events={regional} />
+        <SingaporeAndRegional singapore={singapore} regional={regional} todayISO={todayISO} />
       </main>
 
       <Footer lastUpdated={LAST_UPDATED} />

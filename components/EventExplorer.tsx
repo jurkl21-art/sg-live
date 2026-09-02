@@ -16,6 +16,13 @@ interface EventExplorerProps {
   /** Singapore events only — the regional block is rendered separately. */
   events: SGEvent[];
   todayISO: string;
+  /**
+   * Active tab, controlled by the parent — it also decides whether the
+   * regional festivals section (a sibling, not rendered by this component)
+   * should be visible, so the parent needs to know the current value.
+   */
+  kind: EventKind;
+  onKindChange: (kind: EventKind) => void;
 }
 
 const SECTIONS: { kind: EventKind; label: string; blurb: string }[] = [
@@ -32,14 +39,15 @@ const SECTIONS: { kind: EventKind; label: string; blurb: string }[] = [
 ];
 
 /**
- * Owns all filter state for the two Singapore sections.
+ * Owns filter state for the two Singapore sections. The active tab (`kind`)
+ * is the one exception — it's lifted to the parent, which uses it to decide
+ * whether the regional festivals section should be visible (see `page.tsx`).
  *
  * State is plain React state rather than URL-synced: opening an event is a soft
  * navigation into the intercepted modal route, which preserves this component
  * tree, so the user's filters survive going in and out of an event.
  */
-export function EventExplorer({ events, todayISO }: EventExplorerProps) {
-  const [kind, setKind] = useState<EventKind>('music');
+export function EventExplorer({ events, todayISO, kind, onKindChange }: EventExplorerProps) {
   const [selectedTags, setSelectedTags] = useState<EventTag[]>([]);
   const [dateBucket, setDateBucket] = useState<DateBucket>('all');
   const [query, setQuery] = useState('');
@@ -65,7 +73,7 @@ export function EventExplorer({ events, todayISO }: EventExplorerProps) {
 
   function switchSection(next: EventKind) {
     if (next === kind) return;
-    setKind(next);
+    onKindChange(next);
     // Genre pills and sport pills don't overlap, so a stale selection would
     // silently filter everything out.
     setSelectedTags([]);
