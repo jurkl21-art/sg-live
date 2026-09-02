@@ -42,9 +42,13 @@ The file has no expiry logic itself — pruning is a runtime concern (see below)
 
 ### Filtering is pure functions + one stateful component
 
-`lib/filters.ts` has no React in it — `filterEvents`, `getUpcoming`, `searchMatch`, `bucketOf`, `tagsOf`, etc. are plain functions over `SGEvent[]`. All the interactive state (active tab, selected tags, date bucket, search query, view mode) lives in `components/EventExplorer.tsx`, which is otherwise the only place that composes those pure helpers. Regional festivals are filtered separately and more simply in `components/RegionalSection.tsx` (own country filter, no tag/date filtering) — it deliberately never mixes with the Singapore sections.
+`lib/filters.ts` has no React in it — `filterEvents`, `getUpcoming`, `searchMatch`, `bucketOf`, `tagsOf`, etc. are plain functions over `SGEvent[]`. Most of the interactive state (selected tags, date bucket, search query, view mode) lives in `components/EventExplorer.tsx`, which is otherwise the only place that composes those pure helpers. Regional festivals are filtered separately and more simply in `components/RegionalSection.tsx` (own country filter, no tag/date filtering) — it deliberately never mixes with the Singapore sections.
 
 Filter/view state is plain React state, not URL-synced. That's intentional: because opening an event is a soft navigation (see above), state survives it for free. The tradeoff is a filtered view isn't itself shareable as a URL.
+
+### The Music/Sport tab lives above `EventExplorer`, because a sibling needs it
+
+`page.tsx` is a server component, so it can't hold the active-tab state itself, but that state can't live inside `EventExplorer` either: the regional SEA festivals block (`components/RegionalSection.tsx`) is music-only content and must disappear when the Sport tab is active, and it renders as `EventExplorer`'s sibling, not its child. `components/SingaporeAndRegional.tsx` is the thin client wrapper that resolves this — it owns `kind` and passes it into `EventExplorer` as a controlled prop (`kind`/`onKindChange`), then conditionally renders `RegionalSection` alongside it. If you need to add another cross-section behavior gated on the active tab, it belongs in this wrapper, not in `EventExplorer`.
 
 ### View mode persistence uses `useSyncExternalStore`, not `useState`+`useEffect`
 
@@ -61,6 +65,13 @@ Filter/view state is plain React state, not URL-synced. That's intentional: beca
 ### Styling: Tailwind v4, CSS-first, no config file
 
 There is no `tailwind.config.js`. Design tokens (`--color-*`, `--font-*`, fluid type sizes) are declared in `app/globals.css` via `@theme`, and custom utilities (`grain`, `text-sunset`, `sr-only-focusable`) via `@utility`. `prefers-reduced-motion` is handled once, globally, at the bottom of that file — new animation should not need its own reduced-motion override.
+
+### Content scope: genre/nationality exclusions are deliberate, not gaps
+
+Two standing exclusions apply when adding or refreshing Singapore music entries — both explained in the `SCOPE` comment at the top of `data/events.ts`, and both binding on the weekly automated refresh routine as well as manual edits:
+
+- **K-pop, Mandopop and C-pop are excluded, enforced at the type level.** `MusicGenre` in `lib/types.ts` has no `'k-pop'` or `'mandopop'` member, so tagging an entry with either fails `npm run typecheck`. Don't work around this by inventing an adjacent genre value — it's a deliberate site-scope decision, not an oversight.
+- **Thai and Indonesian artists performing in Singapore are excluded too, but this one can't be type-checked** — an artist's nationality isn't a schema field (`country` on an event is the venue's country, not the performer's). It relies on judgment at research/curation time. This does **not** apply to the regional block: festivals actually hosted in Thailand or Indonesia (Wonderfruit, Tomorrowland Thailand, Djakarta Warehouse Project) stay in scope, since those are curated multi-artist events, not "a Thai/Indonesian artist" in the sense this exclusion targets.
 
 ### Data refresh workflow
 
