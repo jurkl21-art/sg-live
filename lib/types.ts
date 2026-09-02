@@ -30,13 +30,15 @@ export type Scope = 'singapore' | 'regional';
 
 export type EventKind = 'music' | 'sports';
 
+/**
+ * K-pop and Mandopop/C-pop are deliberately excluded from this genre list —
+ * not merely unused. See `data/events.ts`'s SCOPE comment.
+ */
 export type MusicGenre =
   | 'house-techno-edm'
   | 'hip-hop-rnb'
   | 'pop'
   | 'rock-alternative'
-  | 'k-pop'
-  | 'mandopop'
   | 'jazz-soul'
   | 'festival';
 
@@ -116,8 +118,6 @@ export const MUSIC_GENRE_LABELS: Record<MusicGenre, string> = {
   'hip-hop-rnb': 'Hip-Hop / R&B',
   pop: 'Pop',
   'rock-alternative': 'Rock / Alternative',
-  'k-pop': 'K-Pop',
-  mandopop: 'Mandopop / C-Pop',
   'jazz-soul': 'Jazz / Soul',
   festival: 'Festival',
 };

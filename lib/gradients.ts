@@ -48,7 +48,7 @@ export const PALETTES: Record<PaletteKey, Palette> = {
     bloom: 'rgba(76, 226, 208, 0.45)',
     glow: 'rgba(47, 217, 197, 0.4)',
   },
-  // Electric lime — K-pop, hyperpop, high-energy.
+  // Electric lime — hyperpop, high-energy pop.
   acid: {
     stops: ['#0B1A06', '#3F7A17', '#9BE83A'],
     bloom: 'rgba(178, 240, 106, 0.42)',

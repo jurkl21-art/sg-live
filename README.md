@@ -122,7 +122,7 @@ Sources used for the current dataset:
 }
 ```
 
-Available genres: `house-techno-edm`, `hip-hop-rnb`, `pop`, `rock-alternative`, `k-pop`, `mandopop`, `jazz-soul`, `festival`.
+Available genres: `house-techno-edm`, `hip-hop-rnb`, `pop`, `rock-alternative`, `jazz-soul`, `festival`. (K-pop and Mandopop/C-pop are deliberately excluded — see "Assumptions and decisions" below.)
 Available sport categories: `motorsport`, `golf`, `rugby`, `tennis`, `running`, `other`.
 Available palettes: `sunset`, `neon`, `violet`, `ember`, `ocean`, `acid`, `noir`, `gold`.
 
@@ -172,6 +172,8 @@ These were judgement calls made during the build. All are easy to reverse.
 **Unconfirmed events are included, and labelled.** Recurring events whose next edition hasn't been formally announced (LIV Golf Singapore 2027, ZoukOut, the HSBC Women's World Championship) are listed with dates projected from the previous edition and a visible **Date TBC** badge, plus an explicit warning in the detail view. The alternative — omitting them — would leave large gaps in a calendar that people use for planning.
 
 **Local Singaporean artists are out of scope.** The brief asked for international touring acts, so homegrown headliners aren't listed even when they're playing the same venues.
+
+**K-pop, Mandopop and C-pop are out of scope.** A deliberate later decision, not an oversight — these genres previously made up a large share of the calendar. `MusicGenre` in `lib/types.ts` no longer has a `'k-pop'` or `'mandopop'` member, so `npm run typecheck` will reject any entry tagged with either; that's intentional friction against silently reintroducing them. To bring them back, restore the two genre values (and their labels) in `lib/types.ts`, remove the exclusion notes in that file and at the top of `data/events.ts`, and re-run a research pass.
 
 **Filter state is React state, not URL state.** Because opening an event is a soft navigation, filters survive it. The trade-off is that a filtered view isn't shareable as a URL. If that matters, lift the state in `components/EventExplorer.tsx` into `useSearchParams`.
 
