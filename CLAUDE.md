@@ -46,9 +46,9 @@ The file has no expiry logic itself — pruning is a runtime concern (see below)
 
 Filter/view state is plain React state, not URL-synced. That's intentional: because opening an event is a soft navigation (see above), state survives it for free. The tradeoff is a filtered view isn't itself shareable as a URL.
 
-### The Music/Sport tab lives above `EventExplorer`, because a sibling needs it
+### The section tab lives above `EventExplorer` and `RegionalSection`, not inside either
 
-`page.tsx` is a server component, so it can't hold the active-tab state itself, but that state can't live inside `EventExplorer` either: the regional SEA festivals block (`components/RegionalSection.tsx`) is music-only content and must disappear when the Sport tab is active, and it renders as `EventExplorer`'s sibling, not its child. `components/SingaporeAndRegional.tsx` is the thin client wrapper that resolves this — it owns `kind` and passes it into `EventExplorer` as a controlled prop (`kind`/`onKindChange`), then conditionally renders `RegionalSection` alongside it. If you need to add another cross-section behavior gated on the active tab, it belongs in this wrapper, not in `EventExplorer`.
+`page.tsx` is a server component, so it can't hold the active-tab state itself. `components/SingaporeAndRegional.tsx` is the client wrapper that does: it owns a three-way tab (`'music' | 'sports' | 'regional'`), renders the shared pill tablist (`components/SectionTabs.tsx`), and swaps in either `EventExplorer` (Music/Sport) or `RegionalSection` (Regional) — they're mutually exclusive, not stacked, so Regional is no longer "below" the Singapore sections the way it used to be. `EventExplorer` doesn't own tab-switching itself: `kind` is a fixed prop for its lifetime, and the parent remounts it via `key={tab}` when the tab changes, which resets its filter state for free instead of needing an effect to clear a stale selection. If you need another cross-section behavior gated on the active tab, it belongs in this wrapper.
 
 ### View mode persistence uses `useSyncExternalStore`, not `useState`+`useEffect`
 
