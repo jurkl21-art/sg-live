@@ -1274,26 +1274,6 @@ export const events: SGEvent[] = [
       'The Singapore-formed trio bring their international tour home for a headline date, after building a following across Asia and North America on a blend of nostalgic R&B, soul and electronic pop.',
     palette: 'noir',
   },
-  {
-    id: 'zoukout-2026',
-    kind: 'music',
-    scope: 'singapore',
-    title: 'ZoukOut',
-    genres: ['festival', 'house-techno-edm'],
-    venue: 'Siloso Beach',
-    area: 'Sentosa',
-    city: 'Singapore',
-    country: 'Singapore',
-    startDate: '2026-12-19',
-    endDate: '2026-12-20',
-    status: 'tbc',
-    ticketUrl: 'https://zoukgroup.com/zoukout/zoukout-singapore/',
-    sourceUrl: 'https://zoukgroup.com/zoukout/zoukout-singapore/',
-    summary:
-      'Asia’s original sunrise beach party, still the definitive Singapore dance event — sand underfoot, multiple stages, and a main room that runs until the sun comes up over Siloso. Dates and lineup are announced in waves; treat the dates here as indicative until Zouk confirms.',
-    palette: 'sunset',
-  },
-
   /* ==========================================================================
    * SINGAPORE — MUSIC — JANUARY 2027
    * ========================================================================== */
