@@ -41,6 +41,17 @@ import type { SGEvent } from '@/lib/types';
  *   with either fails `npm run typecheck`. Don't add the genres back without
  *   removing this note first.
  *
+ *   Thai and Indonesian artists are also deliberately excluded — again a
+ *   site-scope decision, not an oversight. This one can't be enforced at the
+ *   type level (an artist's nationality isn't a schema field — `country` on an
+ *   event is the venue's country, not the performer's), so it relies on this
+ *   note and on judgment at research time: skip Thai and Indonesian acts
+ *   performing IN Singapore. This does NOT apply to the regional block —
+ *   festivals actually hosted in Thailand or Indonesia (Wonderfruit,
+ *   Tomorrowland Thailand, Djakarta Warehouse Project, etc.) stay in scope,
+ *   since those are curated multi-artist events, not "a Thai/Indonesian
+ *   artist" in the sense this exclusion targets.
+ *
  * KNOWN GAP
  *   Club-night bookings (Zouk, Marquee, CÉ LA VI) are announced only ~4–6 weeks
  *   ahead, so House/Techno entries are always thinner in the back half of the
@@ -183,23 +194,6 @@ export const events: SGEvent[] = [
    * SINGAPORE — MUSIC — SEPTEMBER 2026
    * ========================================================================== */
   {
-    id: 'lykn-mediacorp-theatre',
-    kind: 'music',
-    scope: 'singapore',
-    title: 'LYKN',
-    genres: ['pop'],
-    venue: 'The Theatre @ Mediacorp',
-    area: 'one-north',
-    city: 'Singapore',
-    country: 'Singapore',
-    startDate: '2026-09-06',
-    status: 'confirmed',
-    sourceUrl: 'https://www.asiaone.com/entertainment/concert-calendar-2026-singapore',
-    summary:
-      'Thai boy group LYKN have broken out well beyond Bangkok on the back of T-pop’s regional surge. High-energy choreography and a fiercely organised fanbase.',
-    palette: 'acid',
-  },
-  {
     id: 'happy-mondays-foo-chow-hall',
     kind: 'music',
     scope: 'singapore',
@@ -252,23 +246,6 @@ export const events: SGEvent[] = [
     summary:
       'The 90s R&B harmony group behind a wedding-playlist staple or two. Unabashed nostalgia, and a set that leans hard on the slow jams.',
     palette: 'sunset',
-  },
-  {
-    id: 'milli-foochow-building',
-    kind: 'music',
-    scope: 'singapore',
-    title: 'MILLI',
-    genres: ['hip-hop-rnb'],
-    venue: 'Foochow Building Event Hall',
-    area: 'Bugis',
-    city: 'Singapore',
-    country: 'Singapore',
-    startDate: '2026-09-05',
-    status: 'confirmed',
-    sourceUrl: 'https://thehoneycombers.com/singapore/upcoming-concerts-shows-bands-singapore/',
-    summary:
-      'The Thai rapper who put mango sticky rice on the global pop-culture map, still one of Southeast Asia’s sharpest hip-hop exports. A small room for a genuinely big name back home.',
-    palette: 'gold',
   },
   {
     id: 'brodie-nero-ce-la-vi',
@@ -900,24 +877,6 @@ export const events: SGEvent[] = [
     palette: 'gold',
   },
   {
-    id: 'mahalini-star-theatre',
-    kind: 'music',
-    scope: 'singapore',
-    title: 'Mahalini',
-    genres: ['pop'],
-    venue: 'The Star Theatre',
-    area: 'Buona Vista',
-    city: 'Singapore',
-    country: 'Singapore',
-    startDate: '2026-10-10',
-    status: 'confirmed',
-    priceFrom: 'S$58',
-    sourceUrl: 'https://www.asiaone.com/entertainment/concert-calendar-2026-singapore',
-    summary:
-      'Indonesia’s biggest pop vocalist of the moment, playing to Singapore’s sizeable Indonesian community and anyone who has fallen down the regional-pop rabbit hole. Ballad-heavy and technically formidable.',
-    palette: 'sunset',
-  },
-  {
     id: 'avenged-sevenfold-indoor-stadium',
     kind: 'music',
     scope: 'singapore',
@@ -1199,25 +1158,6 @@ export const events: SGEvent[] = [
     sourceUrl: 'https://www.songkick.com/venues/4348806-national-stadium',
     summary:
       'Three-hour sets, the classic line-up largely intact, and a back catalogue that needs no introduction. The biggest rock booking of the year at the National Stadium.',
-    palette: 'ember',
-  },
-  {
-    id: 'bodyslam-rwcc-ballroom',
-    kind: 'music',
-    scope: 'singapore',
-    title: 'Bodyslam',
-    subtitle: 'Bodyslam Live in Singapore 2026',
-    genres: ['rock-alternative'],
-    venue: 'Resorts World Convention Centre Ballroom',
-    area: 'Sentosa',
-    city: 'Singapore',
-    country: 'Singapore',
-    startDate: '2026-11-27',
-    status: 'confirmed',
-    priceFrom: 'S$138',
-    sourceUrl: 'https://www.ticketmelon.com/badboyent/BodyslamSG2026',
-    summary:
-      'Thailand’s biggest rock band, fronted by Artiwara "Toon" Kongmalai, finally plays a full Singapore headline night after decades of Bangkok stadium shows and stops in Sydney, Taipei and Stockholm. A custom T-stage pushes the band out into the crowd.',
     palette: 'ember',
   },
   {
