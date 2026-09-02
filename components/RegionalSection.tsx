@@ -2,7 +2,9 @@
 
 import { useMemo, useState } from 'react';
 import { EventGrid } from './EventGrid';
+import { ViewToggle } from './ViewToggle';
 import { availableCountries } from '@/lib/filters';
+import { useViewMode } from '@/lib/useViewMode';
 import type { SGEvent } from '@/lib/types';
 
 /**
@@ -13,6 +15,7 @@ import type { SGEvent } from '@/lib/types';
  */
 export function RegionalSection({ events }: { events: SGEvent[] }) {
   const [country, setCountry] = useState<string | null>(null);
+  const [viewMode, setViewMode] = useViewMode();
 
   const countries = useMemo(() => availableCountries(events), [events]);
   const visible = useMemo(
@@ -72,7 +75,14 @@ export function RegionalSection({ events }: { events: SGEvent[] }) {
       </div>
 
       <div className="mt-10">
-        <EventGrid events={visible} emptyMessage="No festivals listed there yet." />
+        <div className="mb-6 flex items-center justify-end">
+          <ViewToggle value={viewMode} onChange={setViewMode} />
+        </div>
+        <EventGrid
+          events={visible}
+          viewMode={viewMode}
+          emptyMessage="No festivals listed there yet."
+        />
       </div>
     </section>
   );
