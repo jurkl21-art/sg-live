@@ -1,25 +1,15 @@
 import Link from 'next/link';
-import { Artwork } from './Artwork';
-import { StatusBadge } from './Badges';
-import { countdownLabel, formatDateRange, formatMonthYear } from '@/lib/dates';
+import { formatDateRange, formatMonthYear } from '@/lib/dates';
 import type { SGEvent } from '@/lib/types';
 
 interface HeroProps {
-  nextUp: SGEvent | undefined;
   /** Marquee ticker content — the featured events across the whole window. */
   headliners: SGEvent[];
   totalEvents: number;
   lastUpdated: string;
-  todayISO: string;
 }
 
-export function Hero({
-  nextUp,
-  headliners,
-  totalEvents,
-  lastUpdated,
-  todayISO,
-}: HeroProps) {
+export function Hero({ headliners, totalEvents, lastUpdated }: HeroProps) {
   return (
     <header className="relative overflow-hidden">
       {/* Sunset wash. Two drifting radial blooms over near-black, plus grain. */}
@@ -70,74 +60,6 @@ export function Hero({
           <span className="hidden h-4 w-px bg-hairline sm:block" />
           <span>Singapore · Thailand · Indonesia</span>
         </div>
-
-        {/* Next up */}
-        {nextUp ? (
-          <div className="mt-14 sm:mt-20">
-            <div className="mb-4 flex items-center gap-3">
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-coral opacity-70" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-coral" />
-              </span>
-              <h2 className="text-[0.7rem] font-semibold tracking-[0.2em] text-cream uppercase">
-                Next up
-              </h2>
-            </div>
-
-            <Link
-              href={`/events/${nextUp.id}`}
-              scroll={false}
-              className="group block overflow-hidden rounded-3xl border border-hairline bg-ink-card/70 backdrop-blur-sm transition-[transform,border-color] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 hover:border-white/25"
-            >
-              <div className="grid md:grid-cols-[1.15fr_1fr]">
-                <Artwork
-                  title={nextUp.title}
-                  palette={nextUp.palette}
-                  variant="hero"
-                  className="aspect-16/10 w-full transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03] md:aspect-auto md:min-h-[22rem]"
-                />
-
-                <div className="flex flex-col justify-center p-6 sm:p-9">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <StatusBadge status={nextUp.status} />
-                    <span className="rounded-full border border-hairline bg-white/6 px-2.5 py-1 text-[0.7rem] font-semibold tracking-wide text-cream/85 uppercase">
-                      {countdownLabel(todayISO, nextUp.startDate)}
-                    </span>
-                  </div>
-
-                  <h3 className="font-display mt-4 text-4xl leading-[0.95] font-bold tracking-tighter text-balance text-cream sm:text-5xl">
-                    {nextUp.title}
-                  </h3>
-                  {nextUp.subtitle ? (
-                    <p className="mt-2 text-base text-faint italic">{nextUp.subtitle}</p>
-                  ) : null}
-
-                  <p className="mt-5 text-base font-medium text-cream">
-                    {formatDateRange(nextUp.startDate, nextUp.endDate)}
-                  </p>
-                  <p className="mt-1 text-sm text-muted">
-                    {nextUp.venue} · {nextUp.area}
-                  </p>
-
-                  <p className="mt-5 line-clamp-3 text-sm leading-relaxed text-muted/85">
-                    {nextUp.summary}
-                  </p>
-
-                  <span className="mt-7 inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-amber via-coral to-violet px-6 py-3 text-sm font-bold text-white transition-transform duration-300 group-hover:scale-[1.03]">
-                    See the details
-                    <svg
-                      viewBox="0 0 12 12"
-                      className="h-3 w-3 fill-current"
-                      aria-hidden="true"
-                    >
-                      <path d="M4.5 1.5 9 6l-4.5 4.5-1-1L7 6 3.5 2.5z" />
-                    </svg>
-                  </span>
-                </div>
-              </div>
-            </Link>
-          </div>
-        ) : null}
       </div>
 
       {/* Headliner ticker */}

@@ -133,15 +133,3 @@ export function tagCounts(events: SGEvent[]): Map<EventTag, number> {
 export function availableCountries(events: SGEvent[]): string[] {
   return [...new Set(events.map((event) => event.country))].sort();
 }
-
-/**
- * The hero's "next up": the soonest featured event that still has a firm date.
- * Falls back to the soonest event of any kind so the hero is never empty.
- */
-export function nextUpEvent(events: SGEvent[]): SGEvent | undefined {
-  return (
-    events.find((event) => event.featured && event.status !== 'tbc') ??
-    events.find((event) => event.featured) ??
-    events[0]
-  );
-}
