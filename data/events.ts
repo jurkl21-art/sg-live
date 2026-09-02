@@ -42,7 +42,7 @@ import type { SGEvent } from '@/lib/types';
  */
 
 /** Date this dataset was last researched and verified. Shown in the UI. */
-export const LAST_UPDATED = '2026-09-01';
+export const LAST_UPDATED = '2026-09-02';
 
 export const events: SGEvent[] = [
   /* ==========================================================================
@@ -410,6 +410,25 @@ export const events: SGEvent[] = [
     palette: 'gold',
   },
   {
+    id: 'firdhaus-indoor-stadium',
+    kind: 'music',
+    scope: 'singapore',
+    title: 'Firdhaus',
+    subtitle: 'Flat Earth Theory Concert Tour 2026',
+    genres: ['mandopop'],
+    venue: 'Singapore Indoor Stadium',
+    area: 'Kallang',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2026-09-12',
+    status: 'confirmed',
+    priceFrom: 'S$98',
+    sourceUrl: 'https://www.songkick.com/concerts/43274086-firdhaus-at-singapore-indoor-stadium',
+    summary:
+      'The Malaysian mandopop singer’s first solo headline at the Indoor Stadium, opening a new tour co-produced with Taiwan’s Young Hope Entertainment. Singapore launches the run before it heads further afield.',
+    palette: 'noir',
+  },
+  {
     id: 'sacha-harland-marquee',
     kind: 'music',
     scope: 'singapore',
@@ -451,15 +470,16 @@ export const events: SGEvent[] = [
     scope: 'singapore',
     title: 'Belle and Sebastian',
     genres: ['rock-alternative'],
-    venue: 'Venue to be confirmed',
-    area: 'Singapore',
+    venue: 'Esplanade Concert Hall',
+    area: 'Marina Bay',
     city: 'Singapore',
     country: 'Singapore',
     startDate: '2026-09-20',
-    status: 'on-sale-soon',
-    sourceUrl: 'https://thehoneycombers.com/singapore/upcoming-concerts-shows-bands-singapore/',
+    status: 'confirmed',
+    priceFrom: 'S$98',
+    sourceUrl: 'https://www.bandwagon.asia/articles/belle-and-sebastian-to-perform-if-you-re-feeling-sinister-in-full-at-singapore-concert-this-september',
     summary:
-      'Scottish indie-pop institution — gentle, literate and wildly beloved by a very specific crowd who will treat this as a pilgrimage. First Singapore date in years.',
+      'Scottish indie-pop institution — gentle, literate and wildly beloved by a very specific crowd who will treat this as a pilgrimage. The set plays 1996’s "If You’re Feeling Sinister" start to finish for its 30th anniversary, plus a second set of favourites.',
     palette: 'ocean',
   },
   {
@@ -852,6 +872,60 @@ export const events: SGEvent[] = [
     palette: 'neon',
   },
   {
+    id: 'diplo-marquee-race-weekend',
+    kind: 'music',
+    scope: 'singapore',
+    title: 'Diplo',
+    subtitle: 'Marquee Singapore — Race Weekend, Friday',
+    genres: ['house-techno-edm'],
+    venue: 'Marquee Singapore',
+    area: 'Marina Bay',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2026-10-09',
+    status: 'confirmed',
+    sourceUrl: 'https://www.bandwagon.asia/articles/marquee-singapore-race-weekend-2026-unveils-diplo-martin-garrix-but-one-night-remains-a-mystery',
+    summary:
+      'Opens Marquee’s three-night Race Weekend takeover with his usual genre-hopping mix of house, hip-hop and pop-leaning EDM — a club-scale alternative to the circuit’s Barge and Padang stages the same night.',
+    palette: 'acid',
+  },
+  {
+    id: 'anyma-marquee-race-weekend',
+    kind: 'music',
+    scope: 'singapore',
+    title: 'Anyma',
+    subtitle: 'Marquee Singapore — Race Weekend, Saturday',
+    genres: ['house-techno-edm'],
+    venue: 'Marquee Singapore',
+    area: 'Marina Bay',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2026-10-10',
+    status: 'confirmed',
+    sourceUrl: 'https://www.bandwagon.asia/articles/anyma-to-make-singapore-debut-at-marquee-for-race-weekend-2026-this-october',
+    summary:
+      'Tale Of Us’ Matteo Milleri brings his cinematic, humanoid-figure stage show to Singapore for the first time — melodic techno built for festival mainstages, compressed into a club room for Race Weekend.',
+    palette: 'violet',
+  },
+  {
+    id: 'martin-garrix-marquee-race-weekend',
+    kind: 'music',
+    scope: 'singapore',
+    title: 'Martin Garrix',
+    subtitle: 'Marquee Singapore — Race Weekend, Sunday',
+    genres: ['house-techno-edm'],
+    venue: 'Marquee Singapore',
+    area: 'Marina Bay',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2026-10-11',
+    status: 'confirmed',
+    sourceUrl: 'https://taogroup.com/event/11-10-26-race-weekend-sunday-marquee-singapore/',
+    summary:
+      'Closes out Marquee’s Race Weekend programme — the Dutch big-room superstar’s mainstage-scale hits make this the weekend’s marquee (pun intended) closing set.',
+    palette: 'neon',
+  },
+  {
     id: 'argy-zouk',
     kind: 'music',
     scope: 'singapore',
@@ -971,6 +1045,25 @@ export const events: SGEvent[] = [
     palette: 'gold',
   },
   {
+    id: 'xlov-star-theatre',
+    kind: 'music',
+    scope: 'singapore',
+    title: 'XLOV',
+    subtitle: '2026 XLOV Asia Tour — SERVING-X',
+    genres: ['k-pop'],
+    venue: 'The Star Theatre',
+    area: 'Buona Vista',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2026-10-01',
+    status: 'confirmed',
+    priceFrom: 'S$142',
+    sourceUrl: 'https://www.sistic.com.sg/events/xlov1026',
+    summary:
+      'The gender-fluid K-pop quartet’s first-ever Singapore show, built around a deliberately futuristic, boundary-blurring concept — a debut booking worth flagging for anyone tracking the genre’s more experimental fringe.',
+    palette: 'neon',
+  },
+  {
     id: 'tws-arena-expo',
     kind: 'music',
     scope: 'singapore',
@@ -1086,16 +1179,18 @@ export const events: SGEvent[] = [
     kind: 'music',
     scope: 'singapore',
     title: 'NCT 127',
+    subtitle: 'NEO CITY: SINGAPORE – THE REDLINE',
     genres: ['k-pop'],
     venue: 'Singapore Indoor Stadium',
     area: 'Kallang',
     city: 'Singapore',
     country: 'Singapore',
     startDate: '2026-10-18',
-    status: 'on-sale-soon',
-    sourceUrl: 'https://www.asiaone.com/entertainment/concert-calendar-2026-singapore',
+    status: 'confirmed',
+    priceFrom: 'S$228',
+    sourceUrl: 'https://tickets.songkick.com/concerts/43311577-nct-127-at-singapore-indoor-stadium',
     summary:
-      'The Seoul-based NCT unit remain the most sonically aggressive act on a major K-pop label. Ticketing details are still to be confirmed.',
+      'The Seoul-based NCT unit remain the most sonically aggressive act on a major K-pop label. Fifth tour stop in Singapore, with general sale already open and prices running up to $368 for VIP.',
     palette: 'neon',
   },
   {
@@ -1253,16 +1348,18 @@ export const events: SGEvent[] = [
     kind: 'music',
     scope: 'singapore',
     title: 'izna',
+    subtitle: 'WHO DAT GIRL? Concert Tour',
     genres: ['k-pop'],
     venue: 'Capitol Theatre',
     area: 'City Hall',
     city: 'Singapore',
     country: 'Singapore',
     startDate: '2026-11-08',
-    status: 'on-sale-soon',
-    sourceUrl: 'https://www.asiaone.com/entertainment/concert-calendar-2026-singapore',
+    status: 'confirmed',
+    priceFrom: 'S$160',
+    sourceUrl: 'https://x-clusive.sg/events/izna-who-dat-girl-concert-singapore/',
     summary:
-      'The survival-show-formed girl group play an intimate theatre date. Ticketing details are still to be announced.',
+      'The survival-show-formed girl group play an intimate theatre date. Tickets go on sale September 12, with VIP running up to $280.',
     palette: 'neon',
   },
   {
@@ -1282,6 +1379,25 @@ export const events: SGEvent[] = [
     summary:
       'Hong Kong’s reigning interpreter of the late-night torch song. Immaculate phrasing, a smoky band, and a room full of people who know every word.',
     palette: 'noir',
+  },
+  {
+    id: 'wave-to-earth-indoor-stadium',
+    kind: 'music',
+    scope: 'singapore',
+    title: 'wave to earth',
+    subtitle: 'the pieces tour',
+    genres: ['rock-alternative'],
+    venue: 'Singapore Indoor Stadium',
+    area: 'Kallang',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2026-11-20',
+    status: 'confirmed',
+    priceFrom: 'S$148',
+    sourceUrl: 'https://detour.songkick.com/concerts/43238730-wave-to-earth-at-singapore-indoor-stadium',
+    summary:
+      'The South Korean indie-folk-rock trio graduate to the Indoor Stadium, their biggest headline room yet — a big step up for a dreamy, guitar-led sound that built its following almost entirely off streaming rather than idol-pop marketing.',
+    palette: 'ocean',
   },
   {
     id: 'my-chemical-romance-indoor-stadium',
@@ -1363,16 +1479,17 @@ export const events: SGEvent[] = [
     kind: 'music',
     scope: 'singapore',
     title: 'Khalid',
+    subtitle: "It's Always Summer Somewhere",
     genres: ['hip-hop-rnb', 'pop'],
     venue: 'The Star Theatre',
     area: 'Buona Vista',
     city: 'Singapore',
     country: 'Singapore',
     startDate: '2026-11-24',
-    status: 'on-sale-soon',
-    sourceUrl: 'https://www.asiaone.com/entertainment/concert-calendar-2026-singapore',
+    status: 'confirmed',
+    sourceUrl: 'https://www.timeout.com/singapore/news/khalid-returns-to-singapore-this-november-with-his-its-always-summer-somewhere-tour-070726',
     summary:
-      'Warm, unhurried R&B built for exactly this kind of room. Ticketing details are still to be announced.',
+      'Warm, unhurried R&B built for exactly this kind of room. General sale opened in July via Ticketmaster, following a Mastercard and Live Nation members presale.',
     palette: 'sunset',
   },
   {
@@ -1451,6 +1568,25 @@ export const events: SGEvent[] = [
     summary:
       'YG’s first girl group since BLACKPINK, and they perform like a label betting everything on them. Two nights of very high-difficulty vocal and dance work.',
     palette: 'acid',
+  },
+  {
+    id: 'bodyslam-rwcc-ballroom',
+    kind: 'music',
+    scope: 'singapore',
+    title: 'Bodyslam',
+    subtitle: 'Bodyslam Live in Singapore 2026',
+    genres: ['rock-alternative'],
+    venue: 'Resorts World Convention Centre Ballroom',
+    area: 'Sentosa',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2026-11-27',
+    status: 'confirmed',
+    priceFrom: 'S$138',
+    sourceUrl: 'https://www.ticketmelon.com/badboyent/BodyslamSG2026',
+    summary:
+      'Thailand’s biggest rock band, fronted by Artiwara "Toon" Kongmalai, finally plays a full Singapore headline night after decades of Bangkok stadium shows and stops in Sydney, Taipei and Stockholm. A custom T-stage pushes the band out into the crowd.',
+    palette: 'ember',
   },
   {
     id: 'caribou-capitol-theatre',
@@ -1670,6 +1806,7 @@ export const events: SGEvent[] = [
     kind: 'music',
     scope: 'singapore',
     title: 'Doh Kyung-soo (D.O.)',
+    subtitle: 'DAY OFF Concert Tour',
     genres: ['k-pop'],
     venue: 'Singapore Indoor Stadium',
     area: 'Kallang',
@@ -1677,9 +1814,9 @@ export const events: SGEvent[] = [
     country: 'Singapore',
     startDate: '2027-01-09',
     status: 'on-sale-soon',
-    sourceUrl: 'https://www.asiaone.com/entertainment/singapore-concert-calendar-2027',
+    sourceUrl: 'https://www.starnewskorea.com/en/music/2026/08/11/2026081116344129301',
     summary:
-      'The EXO vocalist’s solo work is warm, acoustic-leaning and deliberately understated — a long way from his group’s output. Ticketing details still to be announced.',
+      'The EXO vocalist’s solo work is warm, acoustic-leaning and deliberately understated — a long way from his group’s output. Singapore opens the 2027 leg of his "DAY OFF" tour, right after Hong Kong and Manila; ticketing details still to be announced.',
     palette: 'ocean',
   },
   {
@@ -1724,6 +1861,7 @@ export const events: SGEvent[] = [
     kind: 'music',
     scope: 'singapore',
     title: 'BOYNEXTDOOR',
+    subtitle: 'KNOCK ON Vol. 2 World Tour',
     genres: ['k-pop'],
     venue: 'Singapore Indoor Stadium',
     area: 'Kallang',
@@ -1732,9 +1870,9 @@ export const events: SGEvent[] = [
     startDate: '2027-01-23',
     status: 'on-sale-soon',
     sourceUrl:
-      'https://www.harpersbazaar.com.sg/lifestyle/kpop-concerts-singapore',
+      'https://kpopnewswire.com/boynextdoor-world-tour-knock-on-vol-2-dates-venues-tickets-and-more/',
     summary:
-      'HYBE’s youngest boy group return to the Indoor Stadium after a fast rise. Loose, hip-hop-inflected pop with an unusually casual on-stage manner for the genre.',
+      'HYBE’s youngest boy group return to the Indoor Stadium after a fast rise, with material from 2026 album "HOME" getting its live debut. Loose, hip-hop-inflected pop with an unusually casual on-stage manner for the genre.',
     palette: 'acid',
   },
 
@@ -1786,6 +1924,7 @@ export const events: SGEvent[] = [
     kind: 'music',
     scope: 'singapore',
     title: 'Stray Kids',
+    subtitle: 'RUN IT World Tour',
     genres: ['k-pop'],
     venue: 'Singapore Indoor Stadium',
     area: 'Kallang',
@@ -1793,11 +1932,12 @@ export const events: SGEvent[] = [
     country: 'Singapore',
     startDate: '2027-03-06',
     endDate: '2027-03-07',
-    status: 'on-sale-soon',
+    status: 'confirmed',
+    priceFrom: 'S$168',
     featured: true,
-    sourceUrl: 'https://www.asiaone.com/entertainment/singapore-concert-calendar-2027',
+    sourceUrl: 'https://www.bandwagon.asia/articles/stray-kids-set-to-run-it-in-singapore-in-march-2027-here-s-how-to-get-tickets',
     summary:
-      'Two nights from the loudest, most maximalist act in K-pop — they write and produce their own material, and it shows in how relentless the live show is. Ticketing still to be confirmed.',
+      'Two nights from the loudest, most maximalist act in K-pop — they write and produce their own material, and it shows in how relentless the live show is. Fan presale opens in late August, general sale follows via Ticketmaster.',
     palette: 'ember',
   },
   {
@@ -1830,12 +1970,12 @@ export const events: SGEvent[] = [
     country: 'Singapore',
     startDate: '2027-03-26',
     endDate: '2027-03-28',
-    status: 'on-sale-soon',
+    status: 'confirmed',
     ticketUrl: 'https://ultramusicfestival.com/worldwide/ultra-worldwide-announces-ultra-singapore/',
     featured: true,
     sourceUrl: 'https://ultramusicfestival.com/worldwide/ultra-singapore-announces-massive-phase-one-lineup/',
     summary:
-      'Ultra Worldwide’s return to Singapore after nearly a decade away, and the first event of its kind at a brand-new outdoor venue directly across from Marina Bay Sands. Phase one of the lineup is already out — a genuine marquee addition to the 2027 calendar.',
+      'Ultra Worldwide’s return to Singapore after nearly a decade away, and the first event of its kind at a brand-new outdoor venue directly across from Marina Bay Sands. Phase One is confirmed — Kygo headlining his own birthday weekend, plus Axwell Λ Ingrosso, NERO, DJ Snake, Marshmello and JAUZ — with tickets already on sale.',
     palette: 'acid',
   },
   {
@@ -1855,6 +1995,27 @@ export const events: SGEvent[] = [
     summary:
       'Irish stadium-rock with an unusually strong hold on Southeast Asian audiences. Emotional, singalong-heavy, and very well suited to the Indoor Stadium.',
     palette: 'ocean',
+  },
+
+  {
+    id: 'bruno-mars-national-stadium',
+    kind: 'music',
+    scope: 'singapore',
+    title: 'Bruno Mars',
+    subtitle: 'The Romantic Tour',
+    genres: ['pop', 'hip-hop-rnb'],
+    venue: 'National Stadium',
+    area: 'Kallang',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2027-04-13',
+    endDate: '2027-04-18',
+    status: 'on-sale-soon',
+    featured: true,
+    sourceUrl: 'https://www.livenation.sg/event/bruno-mars-the-romantic-tour-singapore-tickets-edp1692918',
+    summary:
+      'Four nights (13, 14, 17 and 18 April) at National Stadium, with Anderson .Paak opening every date as DJ Pee .Wee — the biggest Western pop booking on the 2027 calendar, echoing his multi-night stand here in early 2024. Live Nation presale opens September 11, general sale September 14.',
+    palette: 'gold',
   },
 
   /* ==========================================================================
@@ -2033,9 +2194,9 @@ export const events: SGEvent[] = [
     endDate: '2027-03-14',
     status: 'tbc',
     ticketUrl: 'https://www.livgolf.com/schedule',
-    sourceUrl: 'https://www.livgolf.com/schedule',
+    sourceUrl: 'https://www.livgolf.com/2027-schedule',
     summary:
-      'Sentosa has hosted LIV every year since 2023, with the shotgun-start format and a concert bolted onto the final round. The 2027 date is projected from previous editions — LIV had not published its 2027 schedule at the last refresh.',
+      'Sentosa has hosted LIV every year since 2023, with the shotgun-start format and a concert bolted onto the final round. LIV’s released 2027 global schedule (Hong Kong, Riyadh, Adelaide, South Africa, Mexico City, Korea) does not yet list a Singapore date, so the dates here are a placeholder carried over from 2026 pending confirmation.',
     palette: 'gold',
   },
   {
@@ -2070,9 +2231,9 @@ export const events: SGEvent[] = [
     startDate: '2027-05-25',
     endDate: '2027-05-30',
     status: 'tbc',
-    sourceUrl: 'https://res.cloudinary.com/badminton/images/v1782784055/wordpress_assets_test/BWF-World-Tour-Calendar-2027-2028/BWF-World-Tour-Calendar-2027-2028.pdf',
+    sourceUrl: 'https://bwfworldtour.bwfbadminton.com/tournament/5959/singapore-badminton-open-2027/overview',
     summary:
-      'Singapore has been downgraded from Super 750 to Super 500 status for the 2027–2030 BWF cycle, which will likely thin the field somewhat. Exact 2027 dates are not yet published — those shown here are projected from the prior edition.',
+      'Singapore has been downgraded from Super 750 to Super 500 status for the 2027–2030 BWF cycle, which will likely thin the field somewhat. BWF’s own tournament page confirms a 2027 edition exists, but sources still disagree on exact dates (late May vs. early June) — those shown here match the prior edition’s slot pending a final calendar.',
     palette: 'ember',
   },
   {
@@ -2089,9 +2250,9 @@ export const events: SGEvent[] = [
     endDate: '2027-06-20',
     status: 'tbc',
     sourceUrl:
-      'https://www.sportplus.sg/post/26-major-sports-events-to-look-forward-to-in-2026-in-singapore-and-around-the-region',
+      'https://fiba3x3.com/en/news/2025/three-fiba-events-to-be-held-in-singapore-between-2026-and-2027.html',
     summary:
-      'Singapore hosts the world championship of Olympic 3x3 basketball — short games, a shot clock that never lets up, and a DJ courtside throughout. Exact dates within June are still to be confirmed.',
+      'Singapore hosts the world championship of Olympic 3x3 basketball — short games, a shot clock that never lets up, and a DJ courtside throughout. FIBA has confirmed the event for June 2027 with roughly 40 teams over seven days, but exact dates and venue are still to be announced.',
     palette: 'neon',
   },
 
@@ -2116,6 +2277,25 @@ export const events: SGEvent[] = [
     sourceUrl: 'https://www.musicfestivalwizard.com/festivals/wonderfruit-festival-2026/',
     summary:
       'Four days of music, art, food and workshops on a farm outside Pattaya, built around bamboo architecture that gets rebuilt every year. Less about headliners than about atmosphere — the closest thing Southeast Asia has to a Burning Man sensibility, and the easiest festival trip from Singapore.',
+    palette: 'acid',
+  },
+  {
+    id: 'edc-thailand-2026',
+    kind: 'music',
+    scope: 'regional',
+    title: 'EDC Thailand',
+    genres: ['festival', 'house-techno-edm'],
+    venue: 'Rhythm Park, Laguna Phuket',
+    area: 'Phuket',
+    city: 'Phuket',
+    country: 'Thailand',
+    startDate: '2026-12-18',
+    endDate: '2026-12-20',
+    status: 'confirmed',
+    ticketUrl: 'https://thailand.edc.com/en/tickets/',
+    sourceUrl: 'https://thailand.edc.com/en/',
+    summary:
+      'Insomniac’s global Electric Daisy Carnival brand returns to Phuket for a surprise second 2026 edition, shifting to a December slot as the closing chapter of EDC’s 30th-anniversary world tour. Over 100 international DJs across house, techno, trance and drum & bass, plus EDC’s usual carnival rides and art cars.',
     palette: 'acid',
   },
   {
@@ -2170,12 +2350,12 @@ export const events: SGEvent[] = [
     city: 'Phuket',
     country: 'Thailand',
     startDate: '2027-01-09',
-    endDate: '2027-01-16',
-    status: 'tbc',
+    endDate: '2027-01-23',
+    status: 'confirmed',
     ticketUrl: 'https://ra.co/clubs/',
-    sourceUrl: 'https://electronicgroove.com/circoloco-returns-thailand-baba-beach-2026/',
+    sourceUrl: 'https://edmhousenetwork.com/circoloco-thailand-confirms-return-for-2027/',
     summary:
-      'The DC-10 Ibiza institution decamps to a beach club north of Phuket, typically for two Saturdays running 3pm to 3am. Underground house and techno with an Ibiza booking policy and no big-room concessions. Dates projected from the previous edition.',
+      'The DC-10 Ibiza institution decamps to a beach club north of Phuket, expanding to three consecutive Saturdays (Jan 9, 16 and 23) for 2027 after 2026’s two-weekend run sold more than 20,000 tickets. Underground house and techno with an Ibiza booking policy and no big-room concessions.',
     palette: 'sunset',
   },
   {
@@ -2215,6 +2395,26 @@ export const events: SGEvent[] = [
     summary:
       'Thailand’s serious indie and alternative festival has split its second season into a run of standalone shows rather than one weekend — three different promoters, three different rooms, spread October through December. Confirmed so far: PREP (Oct 17), Cö shu Nie (Nov 27) and Kings of Convenience (Dec 1). Buy tickets per show, not for one field.',
     palette: 'ember',
+  },
+  {
+    id: 'rainforest-world-music-festival-2027',
+    kind: 'music',
+    scope: 'regional',
+    title: 'Rainforest World Music Festival',
+    subtitle: '30th Anniversary Edition',
+    genres: ['festival'],
+    venue: 'Sarawak Cultural Village',
+    area: 'Kuching',
+    city: 'Kuching',
+    country: 'Malaysia',
+    startDate: '2027-06-25',
+    endDate: '2027-06-27',
+    status: 'confirmed',
+    ticketUrl: 'https://rwmf.net/tickets/',
+    sourceUrl: 'https://malaysia-asia.my/2026/06/ultimate-guide-to-rainforest-world-music-festival-2027-three-decades-of-jungle-magic/',
+    summary:
+      'Asia’s longest-running world-music festival marks its 30th year at the Sarawak Cultural Village under Mount Santubong, pairing evening main-stage concerts by global folk and roots acts with daytime workshops and cultural showcases. A calmer, more cultural counterpoint to the region’s EDM-heavy festival calendar.',
+    palette: 'ocean',
   },
 ];
 
