@@ -59,7 +59,7 @@ import type { SGEvent } from '@/lib/types';
  */
 
 /** Date this dataset was last researched and verified. Shown in the UI. */
-export const LAST_UPDATED = '2026-09-02';
+export const LAST_UPDATED = '2026-09-07';
 
 export const events: SGEvent[] = [
   /* ==========================================================================
@@ -444,6 +444,26 @@ export const events: SGEvent[] = [
     summary:
       'The French DJ-producer’s driving, groove-heavy techno has made him a fixture on the European festival circuit — a harder-edged counterpoint to Elderbrook’s melodic set two weeks earlier.',
     palette: 'noir',
+  },
+  {
+    id: 'engelbert-humperdinck-esplanade',
+    kind: 'music',
+    scope: 'singapore',
+    title: 'Engelbert Humperdinck',
+    subtitle: 'The Celebration Tour 2026',
+    genres: ['jazz-soul'],
+    venue: 'Esplanade Concert Hall',
+    area: 'Marina Bay',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2026-09-27',
+    time: '19:30',
+    status: 'confirmed',
+    priceFrom: 'S$167',
+    sourceUrl: 'https://bookmyshow.sg/en/events/the-legend-continues-engelbert-humperdinck-the-celebration-tour-2026/ENGESG26',
+    summary:
+      'The veteran British crooner marks his 60th year in the industry reinterpreting Great American Songbook standards alongside signatures like "Release Me" and "The Last Waltz". A genuine rarity on a calendar this skewed towards touring pop and rock.',
+    palette: 'gold',
   },
 
   {
@@ -1059,10 +1079,10 @@ export const events: SGEvent[] = [
     city: 'Singapore',
     country: 'Singapore',
     startDate: '2026-11-13',
-    status: 'on-sale-soon',
+    status: 'tbc',
     sourceUrl: 'https://www.asiaone.com/entertainment/concert-calendar-2026-singapore',
     summary:
-      'A Japanese singer-songwriter show in one of the smallest rooms on this list. Details still to be confirmed.',
+      'A Japanese singer-songwriter show in one of the smallest rooms on this list. Still no on-sale date or venue confirmation as of this refresh.',
     palette: 'ocean',
   },
   {
@@ -1082,6 +1102,26 @@ export const events: SGEvent[] = [
       'https://www.harpersbazaar.com.sg/lifestyle/upcoming-concerts-and-music-festivals-singapore-dates-and-tickets',
     summary:
       'The Australian band’s first Singapore show in eight years, with a second date added in December after demand. Older, heavier and considerably less boy-band than the crowd remembers.',
+    palette: 'ember',
+  },
+  {
+    id: 'simple-plan-indoor-stadium',
+    kind: 'music',
+    scope: 'singapore',
+    title: 'Simple Plan',
+    subtitle: 'The Bigger Than You Think! World Tour',
+    genres: ['rock-alternative', 'pop'],
+    venue: 'Singapore Indoor Stadium',
+    area: 'Kallang',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2026-11-22',
+    time: '19:00',
+    status: 'confirmed',
+    priceFrom: 'S$98',
+    sourceUrl: 'https://www.timeout.com/singapore/news/simple-plan-returns-to-singapore-with-their-the-bigger-than-you-think-world-tour-042426',
+    summary:
+      'The Canadian pop-punk veterans mark 25 years as a band with a set that mixes new material against "I\'m Just a Kid", "Welcome to My Life" and "Perfect" — their first Singapore date since 2023.',
     palette: 'ember',
   },
   {
@@ -1482,6 +1522,26 @@ export const events: SGEvent[] = [
     palette: 'gold',
   },
   {
+    id: 'mizuho-blue-challenge-kallang-2026',
+    kind: 'sports',
+    scope: 'singapore',
+    title: 'Mizuho Blue Challenge',
+    subtitle: 'The Kallang Football Series Singapore',
+    categories: ['other'],
+    venue: 'National Stadium, The Kallang',
+    area: 'Kallang',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2026-11-13',
+    endDate: '2026-11-17',
+    status: 'confirmed',
+    priceFrom: 'S$28',
+    sourceUrl: 'https://www.thekallang.com.sg/en/media-centre/mizuho-blue-challenge-the-kallang-football-series-singapore.html',
+    summary:
+      'An inaugural four-nation friendly series marking 60 years of Singapore–Japan diplomatic ties: Singapore face Paraguay (13 Nov), Japan meet Brazil in a World Cup 2026 rematch (14 Nov), then a Singapore–Brazil / Japan–Paraguay doubleheader closes it out (17 Nov). Brazil’s visit is the marquee draw.',
+    palette: 'gold',
+  },
+  {
     id: 'singapore-canoe-marathon-2027',
     kind: 'sports',
     scope: 'singapore',
@@ -1492,6 +1552,7 @@ export const events: SGEvent[] = [
     city: 'Singapore',
     country: 'Singapore',
     startDate: '2027-01-16',
+    endDate: '2027-01-17',
     status: 'confirmed',
     sourceUrl: 'https://ahboy.com/singapore-events/category/singapore-sporting-events/',
     summary:
@@ -1531,13 +1592,12 @@ export const events: SGEvent[] = [
     area: 'Kallang',
     city: 'Singapore',
     country: 'Singapore',
-    startDate: '2027-02-19',
-    endDate: '2027-03-01',
-    status: 'tbc',
-    sourceUrl:
-      'https://www.sportplus.sg/post/26-major-sports-events-to-look-forward-to-in-2026-in-singapore-and-around-the-region',
+    startDate: '2027-02-18',
+    endDate: '2027-02-28',
+    status: 'confirmed',
+    sourceUrl: 'https://www.ittf.com/2026/09/01/ittf-and-wtt-unveil-2027-table-tennis-calendar/',
     summary:
-      'Table tennis’ equivalent of a Grand Slam, and one of only a handful worldwide. Dates shown mirror the 2026 edition and are indicative until the 2027 calendar is published.',
+      'Table tennis’ equivalent of a Grand Slam, and one of only a handful worldwide. Dates are now locked in on the official 2027 WTT calendar, shifting slightly earlier than the 2026 edition.',
     palette: 'violet',
   },
   {
@@ -1608,12 +1668,12 @@ export const events: SGEvent[] = [
     area: 'Kallang',
     city: 'Singapore',
     country: 'Singapore',
-    startDate: '2027-05-25',
-    endDate: '2027-05-30',
-    status: 'tbc',
+    startDate: '2027-06-08',
+    endDate: '2027-06-13',
+    status: 'confirmed',
     sourceUrl: 'https://bwfworldtour.bwfbadminton.com/tournament/5959/singapore-badminton-open-2027/overview',
     summary:
-      'Singapore has been downgraded from Super 750 to Super 500 status for the 2027–2030 BWF cycle, which will likely thin the field somewhat. BWF’s own tournament page confirms a 2027 edition exists, but sources still disagree on exact dates (late May vs. early June) — those shown here match the prior edition’s slot pending a final calendar.',
+      'Singapore has been downgraded from Super 750 to Super 500 status for the 2027–2030 BWF cycle, which will likely thin the field somewhat. The BWF World Tour Calendar 2027–2028 now locks the dates in for early June, a shift later than the prior edition’s late-May slot.',
     palette: 'ember',
   },
   {
@@ -1775,6 +1835,24 @@ export const events: SGEvent[] = [
     summary:
       'Thailand’s serious indie and alternative festival has split its second season into a run of standalone shows rather than one weekend — three different promoters, three different rooms, spread October through December. Confirmed so far: PREP (Oct 17), Cö shu Nie (Nov 27) and Kings of Convenience (Dec 1). Buy tickets per show, not for one field.',
     palette: 'ember',
+  },
+  {
+    id: 'zamna-phuket-2027',
+    kind: 'music',
+    scope: 'regional',
+    title: 'Zamna Phuket',
+    genres: ['festival', 'house-techno-edm'],
+    venue: 'Venue TBC',
+    area: 'Phuket',
+    city: 'Phuket',
+    country: 'Thailand',
+    startDate: '2027-01-23',
+    endDate: '2027-01-24',
+    status: 'confirmed',
+    sourceUrl: 'https://iflyer.tv/en/article/2026/05/29/zamna-phuket/',
+    summary:
+      'The Tulum destination-festival brand’s first Phuket edition, following a smaller test event on Koh Samui earlier in 2026. Dates are locked in; the exact venue on the island has yet to be announced.',
+    palette: 'sunset',
   },
   {
     id: 'rainforest-world-music-festival-2027',
