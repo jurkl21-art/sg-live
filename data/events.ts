@@ -59,7 +59,7 @@ import type { SGEvent } from '@/lib/types';
  */
 
 /** Date this dataset was last researched and verified. Shown in the UI. */
-export const LAST_UPDATED = '2026-09-07';
+export const LAST_UPDATED = '2026-09-14';
 
 export const events: SGEvent[] = [
   /* ==========================================================================
@@ -582,6 +582,27 @@ export const events: SGEvent[] = [
     palette: 'noir',
   },
   {
+    id: 'ce-la-vi-race-week-kickoff',
+    kind: 'music',
+    scope: 'singapore',
+    title: 'Race Week Kick-Off Party',
+    subtitle: 'CÉ LA VI Singapore',
+    genres: ['house-techno-edm'],
+    venue: 'CÉ LA VI Singapore',
+    area: 'Marina Bay',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2026-10-08',
+    time: '23:00',
+    status: 'confirmed',
+    priceFrom: 'S$58',
+    ticketUrl: 'https://sg.celavi.com/club',
+    sourceUrl: 'https://sg.celavi.com/blog/guide-to-experience-race-weekend-singapore',
+    summary:
+      'CÉ LA VI opens its three-night Race Week rooftop programme 57 storeys above the circuit, with the club’s own Sgamo soundtracking the opening night before the bigger international bookings later in the weekend.',
+    palette: 'sunset',
+  },
+  {
     id: 'f1-grand-prix-season-concerts',
     kind: 'music',
     scope: 'singapore',
@@ -816,6 +837,25 @@ export const events: SGEvent[] = [
     palette: 'ember',
   },
   {
+    id: 'caiiro-da-capo-ce-la-vi',
+    kind: 'music',
+    scope: 'singapore',
+    title: 'Caiiro & Da Capo',
+    subtitle: 'CÉ LA VI Race Week',
+    genres: ['house-techno-edm'],
+    venue: 'CÉ LA VI Singapore',
+    area: 'Marina Bay',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2026-10-10',
+    status: 'confirmed',
+    ticketUrl: 'https://sg.celavi.com/club',
+    sourceUrl: 'https://sg.celavi.com/blog/guide-to-experience-race-weekend-singapore',
+    summary:
+      'The two South African Afro House and deep-tech artists take over CÉ LA VI’s rooftop for a five-hour back-to-back set, the middle night of the venue’s Race Week programme.',
+    palette: 'sunset',
+  },
+  {
     id: 'lana-del-rey-f1-padang',
     kind: 'music',
     scope: 'singapore',
@@ -895,6 +935,26 @@ export const events: SGEvent[] = [
     summary:
       'The producer behind a decade of other people’s biggest hits closes out the floating Barge Stage on the final night of the race weekend with a proper DJ set.',
     palette: 'gold',
+  },
+  {
+    id: 'carl-cox-ce-la-vi-race-week',
+    kind: 'music',
+    scope: 'singapore',
+    title: 'Carl Cox',
+    subtitle: 'CÉ LA VI Race Week — Lights Out',
+    genres: ['house-techno-edm'],
+    venue: 'CÉ LA VI Singapore',
+    area: 'Marina Bay',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2026-10-11',
+    status: 'confirmed',
+    priceFrom: 'S$300',
+    ticketUrl: 'https://sg.celavi.com/club',
+    sourceUrl: 'https://sg.celavi.com/blog/guide-to-experience-race-weekend-singapore',
+    summary:
+      'The UK dance-music veteran closes out CÉ LA VI’s Race Week programme with support from Kim Turnbull and Jeremy Healy — a rooftop-scale alternative to the circuit’s Padang and Barge stages on the weekend’s final night.',
+    palette: 'noir',
   },
   {
     id: 'avenged-sevenfold-indoor-stadium',
@@ -1430,11 +1490,11 @@ export const events: SGEvent[] = [
     country: 'Singapore',
     startDate: '2027-04-13',
     endDate: '2027-04-18',
-    status: 'on-sale-soon',
+    status: 'confirmed',
     featured: true,
     sourceUrl: 'https://www.livenation.sg/event/bruno-mars-the-romantic-tour-singapore-tickets-edp1692918',
     summary:
-      'Four nights (13, 14, 17 and 18 April) at National Stadium, with Anderson .Paak opening every date as DJ Pee .Wee — the biggest Western pop booking on the 2027 calendar, echoing his multi-night stand here in early 2024. Live Nation presale opens September 11, general sale September 14.',
+      'Four nights (13, 14, 17 and 18 April) at National Stadium, with Anderson .Paak opening every date as DJ Pee .Wee — the biggest Western pop booking on the 2027 calendar, echoing his multi-night stand here in early 2024. General sale opened via Ticketmaster on September 14, 2026, following a September 11 presale.',
     palette: 'gold',
   },
 
@@ -1822,7 +1882,7 @@ export const events: SGEvent[] = [
     kind: 'music',
     scope: 'regional',
     title: 'Maho Rasop Series',
-    subtitle: 'PREP, Cö shu Nie, Kings of Convenience & more',
+    subtitle: 'PREP, Caribou, Cö shu Nie, Kings of Convenience & more',
     genres: ['festival', 'rock-alternative'],
     venue: 'Multiple venues (Bangkok)',
     area: 'Bangkok',
@@ -1833,7 +1893,7 @@ export const events: SGEvent[] = [
     status: 'confirmed',
     sourceUrl: 'https://www.bandwagon.asia/articles/kings-of-convenience-return-to-bangkok-for-intimate-maho-rasop-series-show-this-december',
     summary:
-      'Thailand’s serious indie and alternative festival has split its second season into a run of standalone shows rather than one weekend — three different promoters, three different rooms, spread October through December. Confirmed so far: PREP (Oct 17), Cö shu Nie (Nov 27) and Kings of Convenience (Dec 1). Buy tickets per show, not for one field.',
+      'Thailand’s serious indie and alternative festival has split its second season into a run of standalone shows rather than one weekend — four different promoters, four different rooms, spread October through December. Confirmed so far: PREP at Melt Livehouse (Oct 17), Caribou’s live band show at Ambience Space and Cö shu Nie at Volume Livehouse, both landing the same night (Nov 27), and Kings of Convenience (Dec 1). Buy tickets per show, not for one field.',
     palette: 'ember',
   },
   {
