@@ -684,6 +684,26 @@ export const events: SGEvent[] = [
     palette: 'acid',
   },
   {
+    id: 'claptone-after-2049-skypark',
+    kind: 'music',
+    scope: 'singapore',
+    title: 'Claptone',
+    subtitle: 'AFTER 2049 — Marina Bay Sands SkyPark',
+    genres: ['house-techno-edm'],
+    venue: 'SkyPark Observation Deck, Marina Bay Sands',
+    area: 'Marina Bay',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2026-10-09',
+    status: 'confirmed',
+    ticketUrl: 'https://megatix.com.sg/events/after2049',
+    sourceUrl:
+      'https://www.globenewswire.com/news-release/2026/09/10/3359180/0/en/after-2049-confirms-headliners-claptone-and-crusy-for-singapore-grand-prix-weekend-kickoff.html',
+    summary:
+      'The golden-masked house don headlines AFTER 2049, the TOKEN2049 closing party 57 floors above the F1 circuit on the SkyPark observation deck, running Polygon Live’s 360° stage and spatial audio — the only such setup in Southeast Asia this year. Crusy, ANONM, Leon (FR), Milam and Mo-Shi round out the bill; capacity is limited.',
+    palette: 'violet',
+  },
+  {
     id: 'the-killers-f1-padang',
     kind: 'music',
     scope: 'singapore',
