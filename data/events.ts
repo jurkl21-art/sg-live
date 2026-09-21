@@ -59,7 +59,7 @@ import type { SGEvent } from '@/lib/types';
  */
 
 /** Date this dataset was last researched and verified. Shown in the UI. */
-export const LAST_UPDATED = '2026-09-14';
+export const LAST_UPDATED = '2026-09-21';
 
 export const events: SGEvent[] = [
   /* ==========================================================================
@@ -621,7 +621,7 @@ export const events: SGEvent[] = [
     sourceUrl:
       'https://singaporegp.sg/en/news/2026/singapore-gp-completes-star-studded-entertainment-line-up-for-the-formula-1-singapore-airlines-singapore-grand-prix-2026/',
     summary:
-      'Beyond the named Padang and Barge stage headliners (each listed separately below), the race weekend spills across more than ten stages and fringe parties island-wide, with acts including Milky Chance, Portugal. The Man and Peking Duk still to be assigned specific slots. Ticket price included with a circuit pass.',
+      'Beyond the named Padang and Barge stage headliners (each listed separately below), the race weekend spills across more than ten stages and fringe parties island-wide, with acts including Milky Chance, Portugal. The Man, Peking Duk and Run-DMC’s Rev Run still to be assigned specific slots. Ticket price included with a circuit pass.',
     palette: 'sunset',
   },
   {
@@ -974,6 +974,101 @@ export const events: SGEvent[] = [
     sourceUrl: 'https://sg.celavi.com/blog/guide-to-experience-race-weekend-singapore',
     summary:
       'The UK dance-music veteran closes out CÉ LA VI’s Race Week programme with support from Kim Turnbull and Jeremy Healy — a rooftop-scale alternative to the circuit’s Padang and Barge stages on the weekend’s final night.',
+    palette: 'noir',
+  },
+  {
+    id: 'tokimonsta-f1-barge',
+    kind: 'music',
+    scope: 'singapore',
+    title: 'TOKiMONSTA',
+    subtitle: 'F1 Singapore GP — Barge Stage, Friday',
+    genres: ['house-techno-edm'],
+    venue: 'Barge Stage, Marina Bay Street Circuit',
+    area: 'Marina Bay',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2026-10-09',
+    status: 'confirmed',
+    ticketUrl: 'https://singaporegp.sg/en/',
+    sourceUrl: 'https://danamic.org/2026/09/18/singapore-gp-2026-concerts-stages-headliners-and-after-parties/',
+    summary:
+      'The Grammy-nominated producer brings her genre-blurring, bass-heavy blend of hip-hop, house and R&B to the floating Barge Stage on the race weekend’s opening day.',
+    palette: 'neon',
+  },
+  {
+    id: 'flight-facilities-f1-barge',
+    kind: 'music',
+    scope: 'singapore',
+    title: 'Flight Facilities',
+    subtitle: 'F1 Singapore GP — Barge Stage, Saturday',
+    genres: ['house-techno-edm'],
+    venue: 'Barge Stage, Marina Bay Street Circuit',
+    area: 'Marina Bay',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2026-10-10',
+    status: 'confirmed',
+    ticketUrl: 'https://singaporegp.sg/en/',
+    sourceUrl: 'https://danamic.org/2026/09/18/singapore-gp-2026-concerts-stages-headliners-and-after-parties/',
+    summary:
+      'The Australian duo’s dreamy, disco-inflected house makes for a warmer, more melodic counterpoint on the Barge Stage’s Saturday bill.',
+    palette: 'ocean',
+  },
+  {
+    id: 'ezra-collective-f1-downtown',
+    kind: 'music',
+    scope: 'singapore',
+    title: 'Ezra Collective',
+    subtitle: 'F1 Singapore GP — Downtown Stage, Saturday',
+    genres: ['jazz-soul'],
+    venue: 'Downtown Stage, Marina Bay Street Circuit',
+    area: 'Marina Bay',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2026-10-10',
+    status: 'confirmed',
+    ticketUrl: 'https://singaporegp.sg/en/',
+    sourceUrl: 'https://danamic.org/2026/09/18/singapore-gp-2026-concerts-stages-headliners-and-after-parties/',
+    summary:
+      'The Mercury Prize-winning London jazz five-piece bring their horn-driven, Afrobeat-and-dancehall-inflected live show to the circuit’s Downtown Stage — a genuine outlier on a bill this dominated by pop and dance music.',
+    palette: 'gold',
+  },
+  {
+    id: 'ape-drums-f1-waterside',
+    kind: 'music',
+    scope: 'singapore',
+    title: 'Ape Drums',
+    subtitle: 'F1 Singapore GP — Waterside Stage, Saturday',
+    genres: ['hip-hop-rnb', 'house-techno-edm'],
+    venue: 'Waterside Stage, Marina Bay Street Circuit',
+    area: 'Marina Bay',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2026-10-10',
+    status: 'confirmed',
+    ticketUrl: 'https://singaporegp.sg/en/',
+    sourceUrl: 'https://danamic.org/2026/09/18/singapore-gp-2026-concerts-stages-headliners-and-after-parties/',
+    summary:
+      'The producer behind a run of Diplo and Rihanna studio credits plays a late-afternoon hip-hop-and-house set on the circuit’s smaller Waterside Stage.',
+    palette: 'acid',
+  },
+  {
+    id: 'zhu-f1-barge',
+    kind: 'music',
+    scope: 'singapore',
+    title: 'ZHU',
+    subtitle: 'F1 Singapore GP — Barge Stage, Sunday',
+    genres: ['house-techno-edm'],
+    venue: 'Barge Stage, Marina Bay Street Circuit',
+    area: 'Marina Bay',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2026-10-11',
+    status: 'confirmed',
+    ticketUrl: 'https://singaporegp.sg/en/',
+    sourceUrl: 'https://danamic.org/2026/09/18/singapore-gp-2026-concerts-stages-headliners-and-after-parties/',
+    summary:
+      'The masked producer behind "Faded" closes out the Barge Stage’s race-weekend run with his moody, bass-heavy strain of dance music.',
     palette: 'noir',
   },
   {
@@ -1716,8 +1811,27 @@ export const events: SGEvent[] = [
     ticketUrl: 'https://www.livgolf.com/schedule',
     sourceUrl: 'https://www.livgolf.com/2027-schedule',
     summary:
-      'Sentosa has hosted LIV every year since 2023, with the shotgun-start format and a concert bolted onto the final round. LIV’s released 2027 global schedule (Hong Kong, Riyadh, Adelaide, South Africa, Mexico City, Korea) does not yet list a Singapore date, so the dates here are a placeholder carried over from 2026 pending confirmation.',
+      'Sentosa has hosted LIV every year since 2023, with the shotgun-start format and a concert bolted onto the final round. LIV’s released 2027 global schedule (Hong Kong, Riyadh, Adelaide, South Africa, Mexico City, Korea) still does not list a Singapore date, and confirmed Riyadh dates (Mar 10–13) now directly overlap this placeholder window — a Singapore date this cycle looks increasingly unlikely, but nothing has been officially cancelled. Dates here remain a placeholder carried over from 2026 pending confirmation.',
     palette: 'gold',
+  },
+  {
+    id: 'deutsche-bank-singapore-open-2027',
+    kind: 'sports',
+    scope: 'singapore',
+    title: 'Deutsche Bank Singapore Open',
+    subtitle: 'DP World Tour, co-sanctioned with the Asian Tour',
+    categories: ['golf'],
+    venue: 'Sentosa Golf Club, The Serapong',
+    area: 'Sentosa',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2027-04-15',
+    endDate: '2027-04-18',
+    status: 'confirmed',
+    sourceUrl: 'https://www.golfbusinesstechnology.com/sentosa-to-host-2027-deutsche-bank-singapore-open-under-landmark-dp-world-tour-and-asian-tour-partnership/',
+    summary:
+      'The men’s Singapore Open returns to the DP World Tour after 14 years under a new title sponsor and a tri-partite DP World Tour/Asian Tour partnership, forming part of the Asian Swing of the Race to Dubai. A separate tournament from the LPGA’s Women’s World Championship and the (currently uncertain) LIV Golf Singapore date on the same course.',
+    palette: 'ocean',
   },
   {
     id: 'singapore-t100-2027',
@@ -1858,6 +1972,44 @@ export const events: SGEvent[] = [
     summary:
       'The largest dance festival in Asia — around 90,000 people across three days — moves back to its Jakarta home after 2025’s edition ran in Bali. JIExpo Kemayoran has historically been the festival’s primary Jakarta site, though the exact venue building for this edition is not yet stated on official materials.',
     palette: 'violet',
+  },
+  {
+    id: 'joyland-sessions-jakarta-2026',
+    kind: 'music',
+    scope: 'regional',
+    title: 'Joyland Sessions',
+    subtitle: 'Caribou, Slowdive, Fazerdaze & more',
+    genres: ['festival', 'rock-alternative'],
+    venue: 'Gelora Bung Karno (GBK) Senayan',
+    area: 'Senayan',
+    city: 'Jakarta',
+    country: 'Indonesia',
+    startDate: '2026-11-28',
+    endDate: '2026-11-29',
+    status: 'confirmed',
+    sourceUrl: 'https://www.jambase.com/festival/joyland-jakarta-2026',
+    summary:
+      'A Jakarta-based spinoff of the Bali-founded Joyland festival brand, headlined by Caribou and Slowdive with support from Fazerdaze, DOMi & JD Beck and a strong Indonesian indie bill. Two days at the GBK Senayan sports complex.',
+    palette: 'violet',
+  },
+  {
+    id: 'big-mountain-music-village-2026',
+    kind: 'music',
+    scope: 'regional',
+    title: 'Big Mountain Music Village',
+    subtitle: 'formerly Big Mountain Music Festival',
+    genres: ['festival', 'rock-alternative'],
+    venue: 'Farm Chokchai 3',
+    area: 'Pak Chong, Khao Yai',
+    city: 'Nakhon Ratchasima',
+    country: 'Thailand',
+    startDate: '2026-12-12',
+    endDate: '2026-12-13',
+    status: 'confirmed',
+    sourceUrl: 'https://www.timeout.com/bangkok/news/big-mountain-music-festival-gets-a-new-khao-yai-home-081826',
+    summary:
+      'GMM Grammy’s long-running flagship Thai rock-and-indie festival relocates and rebrands for its latest edition, moving from its usual venue to a farm in the Khao Yai countryside outside Bangkok — Thailand’s biggest homegrown festival brand on a genuinely scenic new site.',
+    palette: 'sunset',
   },
   {
     id: 'circoloco-thailand-2027',
