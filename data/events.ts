@@ -59,7 +59,7 @@ import type { SGEvent } from '@/lib/types';
  */
 
 /** Date this dataset was last researched and verified. Shown in the UI. */
-export const LAST_UPDATED = '2026-09-21';
+export const LAST_UPDATED = '2026-09-28';
 
 export const events: SGEvent[] = [
   /* ==========================================================================
@@ -541,6 +541,24 @@ export const events: SGEvent[] = [
     summary:
       'The American duo behind a decade of melodic bass and dubstep anthems, and a former ZoukOut headline booking in their own right — heavy, emotional drops built for a packed room.',
     palette: 'violet',
+  },
+  {
+    id: 'fisher-marquee',
+    kind: 'music',
+    scope: 'singapore',
+    title: 'FISHER',
+    subtitle: 'Marquee Singapore',
+    genres: ['house-techno-edm'],
+    venue: 'Marquee Singapore',
+    area: 'Marina Bay',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2026-10-03',
+    status: 'confirmed',
+    sourceUrl: 'https://taogroup.com/event/03-10-26-fisher-marquee-singapore',
+    summary:
+      'The Grammy-nominated Australian producer behind "Losing It" and a run of festival-mainstage house anthems, with support from APOLLO XO — one of the biggest pure house-music draws to hit Marquee this year.',
+    palette: 'acid',
   },
   {
     id: 'the-weeknd-national-stadium',
@@ -1126,6 +1144,24 @@ export const events: SGEvent[] = [
       'Flamenco-rumba royalty, carried on by the Baliardo family that founded the group. A full band, a three-and-a-half-hour show, and a room built for exactly this kind of heat.',
     palette: 'sunset',
   },
+  {
+    id: 'halo-marquee-b2b',
+    kind: 'music',
+    scope: 'singapore',
+    title: 'Matisse & Sadko, DubVision & Third Party',
+    subtitle: 'HALO — Marquee Singapore',
+    genres: ['house-techno-edm'],
+    venue: 'Marquee Singapore',
+    area: 'Marina Bay',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2026-10-30',
+    status: 'confirmed',
+    sourceUrl: 'https://taogroup.com/event/30-10-26-halo-marquee-singapore',
+    summary:
+      'Three progressive-and-melodic-house acts trade off across one night as part of Marquee\'s Halloween-week programming — a stacked bill rather than a single headliner.',
+    palette: 'violet',
+  },
 
   /* ==========================================================================
    * SINGAPORE — MUSIC — NOVEMBER 2026
@@ -1489,6 +1525,25 @@ export const events: SGEvent[] = [
       'The Singapore-formed trio bring their international tour home for a headline date, after building a following across Asia and North America on a blend of nostalgic R&B, soul and electronic pop.',
     palette: 'noir',
   },
+  {
+    id: 'sven-vath-ce-la-vi-nye',
+    kind: 'music',
+    scope: 'singapore',
+    title: 'Sven Väth',
+    subtitle: "Midnight Rouge — CÉ LA VI New Year's Eve",
+    genres: ['house-techno-edm'],
+    venue: 'CÉ LA VI Singapore',
+    area: 'Marina Bay',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2026-12-31',
+    status: 'confirmed',
+    ticketUrl: 'https://sg.celavi.com/club',
+    sourceUrl: 'https://sg.celavi.com/events/nye-party-midnight-rouge',
+    summary:
+      'The veteran German techno don, a 40-year fixture of Time Warp and Awakenings, closes out the year on CÉ LA VI\'s rooftop with support from Paris-based DJ/producer Adassiya.',
+    palette: 'noir',
+  },
   /* ==========================================================================
    * SINGAPORE — MUSIC — JANUARY 2027
    * ========================================================================== */
@@ -1571,6 +1626,26 @@ export const events: SGEvent[] = [
       'https://www.bandwagon.asia/articles/yoasobi-to-headline-singapore-s-national-stadium-in-february-2027-for-only-sea-stop-of-super-planet-tour',
     summary:
       'The only Southeast Asian stop on the tour, and the first time a Japanese act has headlined the 55,000-capacity National Stadium. J-pop’s biggest crossover duo, playing the anime themes that took them global.',
+    palette: 'violet',
+  },
+  {
+    id: 'milet-star-theatre',
+    kind: 'music',
+    scope: 'singapore',
+    title: 'milet',
+    subtitle: 'Asia Tour 2027',
+    genres: ['pop'],
+    venue: 'The Star Theatre',
+    area: 'Buona Vista',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2027-02-27',
+    time: '20:00',
+    status: 'confirmed',
+    priceFrom: 'S$98',
+    sourceUrl: 'https://www.bandwagon.asia/articles/japanese-singer-songwriter-milet-to-make-singapore-debut-in-february-2027',
+    summary:
+      'The Tokyo-born, Canada-raised singer-songwriter behind theme songs for Demon Slayer and Frieren makes her first-ever solo Southeast Asia stop. Soaring, cinematic vocal pop built as much for anime credits as for a full-band arrangement.',
     palette: 'violet',
   },
   {
@@ -1715,6 +1790,26 @@ export const events: SGEvent[] = [
     summary:
       'An inaugural four-nation friendly series marking 60 years of Singapore–Japan diplomatic ties: Singapore face Paraguay (13 Nov), Japan meet Brazil in a World Cup 2026 rematch (14 Nov), then a Singapore–Brazil / Japan–Paraguay doubleheader closes it out (17 Nov). Brazil’s visit is the marquee draw.',
     palette: 'gold',
+  },
+  {
+    id: 'evo-singapore-2027',
+    kind: 'sports',
+    scope: 'singapore',
+    title: 'Evo Singapore',
+    subtitle: 'Fighting Game Championships',
+    categories: ['other'],
+    venue: 'Marina Bay Sands Expo & Convention Centre',
+    area: 'Marina Bay',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2027-01-15',
+    endDate: '2027-01-17',
+    status: 'confirmed',
+    ticketUrl: 'https://evosingapore.gg/',
+    sourceUrl: 'https://evosingapore.gg/',
+    summary:
+      'The world\'s largest fighting-game festival makes its first foray into Southeast Asia, with Street Fighter 6, Tekken 8, Marvel Tōkon: Fighting Souls, Guilty Gear -Strive- and Granblue Fantasy Versus: Rising across a combined US$125,000+ prize pool, plus the Tekken World Tour 2026 Global Finals running alongside it.',
+    palette: 'neon',
   },
   {
     id: 'singapore-canoe-marathon-2027',
@@ -2085,6 +2180,43 @@ export const events: SGEvent[] = [
     summary:
       'The Tulum destination-festival brand’s first Phuket edition, following a smaller test event on Koh Samui earlier in 2026. Dates are locked in; the exact venue on the island has yet to be announced.',
     palette: 'sunset',
+  },
+  {
+    id: 'unkonscious-festival-2027',
+    kind: 'music',
+    scope: 'regional',
+    title: 'UnKonscious Festival',
+    subtitle: '10th Anniversary Edition',
+    genres: ['festival', 'house-techno-edm'],
+    venue: 'Pattaya Beach & multiple venues',
+    area: 'Pattaya',
+    city: 'Pattaya',
+    country: 'Thailand',
+    startDate: '2027-01-28',
+    endDate: '2027-01-31',
+    status: 'confirmed',
+    sourceUrl: 'https://mixmag.asia/read/unkonscious-festival-pattaya-beach-festival-pure-trance-events',
+    summary:
+      'Asia\'s biggest trance-only festival marks its tenth anniversary across four days and five venues — a boat-party opener, a beachfront main stage, pool parties and a closing night — with more than 40 international trance DJs.',
+    palette: 'acid',
+  },
+  {
+    id: 'locus-bali-2027',
+    kind: 'music',
+    scope: 'regional',
+    title: 'LOCUS Bali',
+    genres: ['festival', 'house-techno-edm'],
+    venue: 'Nuanu Creative City',
+    area: 'Tabanan',
+    city: 'Bali',
+    country: 'Indonesia',
+    startDate: '2027-06-17',
+    endDate: '2027-06-20',
+    status: 'confirmed',
+    sourceUrl: 'https://www.ticketfairy.com/event/locus-bali-2027',
+    summary:
+      'A four-day drum & bass festival at Nuanu\'s genre-spanning creative-city venue, following editions that have drawn jungle and DnB names like Fabio & Grooverider and Ed Rush & Optical — a genre outlier on a regional calendar otherwise dominated by house and techno.',
+    palette: 'ocean',
   },
   {
     id: 'rainforest-world-music-festival-2027',
