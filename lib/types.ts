@@ -49,6 +49,12 @@ export type SportCategory =
   | 'tennis'
   | 'running'
   | 'cycling'
+  | 'football'
+  | 'basketball'
+  | 'badminton'
+  | 'table-tennis'
+  | 'triathlon'
+  | 'esports'
   | 'other';
 
 /** Union of every tag value, used by the generic filter machinery. */
@@ -130,6 +136,12 @@ export const SPORT_CATEGORY_LABELS: Record<SportCategory, string> = {
   tennis: 'Tennis',
   running: 'Running',
   cycling: 'Cycling',
+  football: 'Football',
+  basketball: 'Basketball',
+  badminton: 'Badminton',
+  'table-tennis': 'Table Tennis',
+  triathlon: 'Triathlon',
+  esports: 'Esports',
   other: 'Other',
 };
 

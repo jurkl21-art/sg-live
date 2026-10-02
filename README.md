@@ -90,7 +90,7 @@ Sources used for the current dataset:
 | --- | --- |
 | Concerts | [Songkick Singapore](https://www.songkick.com/metro-areas/32258-singapore-singapore), [Ticketmaster SG](https://ticketmaster.sg/), AsiaOne concert calendars, Harper's Bazaar SG, Bandwagon Asia |
 | Venues | Singapore Indoor Stadium, National Stadium, The Star Theatre, Capitol Theatre, Esplanade |
-| Sport | [singaporegp.sg](https://singaporegp.sg/en/), [LIV Golf](https://www.livgolf.com/), [SVNS](https://www.svns.com/en/events/singapore), [WTA](https://www.wtatennis.com/), LPGA, SportSG, [Tour de France Singapore Criterium](https://efgh.xyz/events/tour-de-france-efgh-singapore-criterium-2026) / [UCI Asia Tour](https://en.wikipedia.org/wiki/2026_UCI_Asia_Tour) |
+| Sport | [singaporegp.sg](https://singaporegp.sg/en/), [LIV Golf](https://www.livgolf.com/), [SVNS](https://www.svns.com/en/events/singapore), [WTA](https://www.wtatennis.com/), LPGA, SportSG, [Tour de France Singapore Criterium](https://efgh.xyz/events/tour-de-france-efgh-singapore-criterium-2026) / [UCI Asia Tour](https://en.wikipedia.org/wiki/2026_UCI_Asia_Tour), [Football Association of Singapore](https://www.fas.org.sg/), [FIBA](https://fiba3x3.com/), [BWF World Tour](https://bwfworldtour.bwfbadminton.com/), [WTT](https://worldtabletennis.com/), [T100 Triathlon](https://t100triathlon.com/singapore/), [Evo Singapore](https://evosingapore.gg/) |
 | Clubs | [Zouk Group](https://zoukgroup.com/singapore/events/), Marquee Singapore, CÉ LA VI, [RA](https://ra.co/) |
 | Regional festivals | Official sites for Tomorrowland Thailand, Wonderfruit, Djakarta Warehouse Project, CircoLoco, Siam Songkran, Maho Rasop |
 
@@ -123,7 +123,7 @@ Sources used for the current dataset:
 ```
 
 Available genres: `house-techno-edm`, `hip-hop-rnb`, `pop`, `rock-alternative`, `jazz-soul`, `festival`. (K-pop and Mandopop/C-pop are deliberately excluded — see "Assumptions and decisions" below.)
-Available sport categories: `motorsport`, `golf`, `rugby`, `tennis`, `running`, `cycling`, `other`.
+Available sport categories: `motorsport`, `golf`, `rugby`, `tennis`, `running`, `cycling`, `football`, `basketball`, `badminton`, `table-tennis`, `triathlon`, `esports`, `other`.
 Available palettes: `sunset`, `neon`, `violet`, `ember`, `ocean`, `acid`, `noir`, `gold`.
 
 ---
