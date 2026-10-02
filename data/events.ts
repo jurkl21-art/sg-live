@@ -59,7 +59,7 @@ import type { SGEvent } from '@/lib/types';
  */
 
 /** Date this dataset was last researched and verified. Shown in the UI. */
-export const LAST_UPDATED = '2026-09-28';
+export const LAST_UPDATED = '2026-10-02';
 
 export const events: SGEvent[] = [
   /* ==========================================================================
@@ -1750,6 +1750,26 @@ export const events: SGEvent[] = [
     summary:
       'Asia’s largest all-women road race turns 20, with seven race categories from a half marathon down to a 100m Princess Dash for young girls. Finishes inside the National Stadium.',
     palette: 'sunset',
+  },
+  {
+    id: 'tour-de-france-efgh-singapore-criterium-2026',
+    kind: 'sports',
+    scope: 'singapore',
+    title: 'Tour de France EFGH Singapore Criterium',
+    subtitle: 'À l’Attaque — 5th edition',
+    categories: ['cycling'],
+    venue: 'Marina Bay & the Padang',
+    area: 'Marina Bay',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2026-11-07',
+    endDate: '2026-11-08',
+    status: 'confirmed',
+    ticketUrl: 'https://raceroster.com/events/2026/129945/tour-de-france-efgh-singapore-criterium-a-lattaque',
+    sourceUrl: 'https://www.timeout.com/singapore/news/tour-de-france-singapore-criterium-2026-brings-top-cycling-rivalries-mass-rides-and-its-first-parade-092526',
+    summary:
+      'The only Tour de France event in Southeast Asia, back for a 5th edition on a closed-city circuit past the Padang, Anderson Bridge and the Esplanade. Isaac del Toro and Paul Seixas headline alongside returning sprinters Jasper Philipsen and Biniam Girmay; a Pro Team Time Trial and a new publicity-caravan-style parade run alongside the Sunday criterium.',
+    palette: 'gold',
   },
   {
     id: 'singapore-international-marathon-2026',

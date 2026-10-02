@@ -48,6 +48,7 @@ export type SportCategory =
   | 'rugby'
   | 'tennis'
   | 'running'
+  | 'cycling'
   | 'other';
 
 /** Union of every tag value, used by the generic filter machinery. */
@@ -128,6 +129,7 @@ export const SPORT_CATEGORY_LABELS: Record<SportCategory, string> = {
   rugby: 'Rugby',
   tennis: 'Tennis',
   running: 'Running',
+  cycling: 'Cycling',
   other: 'Other',
 };
 
