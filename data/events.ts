@@ -59,7 +59,7 @@ import type { SGEvent } from '@/lib/types';
  */
 
 /** Date this dataset was last researched and verified. Shown in the UI. */
-export const LAST_UPDATED = '2026-10-05';
+export const LAST_UPDATED = '2026-10-12';
 
 export const events: SGEvent[] = [
   /* ==========================================================================
@@ -1527,6 +1527,43 @@ export const events: SGEvent[] = [
       'French Kiwi Juice builds entire tracks live and alone — sax, keys, bass, loops — which is a far better spectacle than it sounds on paper. Somewhere between a jazz set and a house set.',
     palette: 'ocean',
   },
+  {
+    id: 'genesi-zouk',
+    kind: 'music',
+    scope: 'singapore',
+    title: 'GENESI',
+    subtitle: 'Zouk Singapore',
+    genres: ['house-techno-edm'],
+    venue: 'Zouk Singapore',
+    area: 'Clarke Quay',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2026-11-06',
+    status: 'confirmed',
+    ticketUrl: 'https://zoukgroup.com/singapore/events/',
+    sourceUrl: 'https://zoukgroup.com/singapore/events/',
+    summary:
+      'The Naples-born producer behind the Beatport No. 1 single "Everything You Have Done" brings his melodic house and techno sets to Zouk’s Mainroom, off the back of festival slots at Creamfields UK and Cavo Paradiso.',
+    palette: 'noir',
+  },
+  {
+    id: 'malcolm-todd-star-theatre',
+    kind: 'music',
+    scope: 'singapore',
+    title: 'Malcolm Todd',
+    subtitle: 'Do That Again Tour',
+    genres: ['pop'],
+    venue: 'The Star Theatre',
+    area: 'Buona Vista',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2026-11-30',
+    status: 'confirmed',
+    sourceUrl: 'https://www.bandwagon.asia/articles/malcolm-todd-to-make-singapore-debut-with-do-that-again-tour-this-november',
+    summary:
+      'The California bedroom-pop singer-songwriter behind viral streaming hits "Chest Pain" and "Bite Me" makes his Singapore debut, closing out the month’s run of touring pop shows.',
+    palette: 'ocean',
+  },
 
   /* ==========================================================================
    * SINGAPORE — MUSIC — DECEMBER 2026
@@ -1707,6 +1744,25 @@ export const events: SGEvent[] = [
     palette: 'sunset',
   },
   {
+    id: 'freya-skye-capitol-theatre',
+    kind: 'music',
+    scope: 'singapore',
+    title: 'Freya Skye',
+    subtitle: 'Stars Align Tour',
+    genres: ['pop'],
+    venue: 'Capitol Theatre',
+    area: 'City Hall',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2027-02-14',
+    time: '20:00',
+    status: 'confirmed',
+    sourceUrl: 'https://www.bandwagon.asia/articles/freya-skye-to-make-singapore-debut-with-stars-align-tour-in-february-2027',
+    summary:
+      'The English pop singer and former UK Junior Eurovision representative plays a Valentine’s Day Singapore debut as part of a wider Asia leg — bright, youth-skewing pop built for a theatre-sized sing-along.',
+    palette: 'sunset',
+  },
+  {
     id: 'yoasobi-national-stadium',
     kind: 'music',
     scope: 'singapore',
@@ -1766,6 +1822,25 @@ export const events: SGEvent[] = [
     palette: 'ocean',
   },
 
+  {
+    id: 'beabadoobee-indoor-stadium',
+    kind: 'music',
+    scope: 'singapore',
+    title: 'beabadoobee',
+    subtitle: 'The Powerlines Tour',
+    genres: ['rock-alternative', 'pop'],
+    venue: 'Singapore Indoor Stadium',
+    area: 'Kallang',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2027-04-04',
+    time: '20:00',
+    status: 'confirmed',
+    sourceUrl: 'https://www.bandwagon.asia/articles/beabadoobee-to-bring-the-powerlines-tour-to-singapore-indoor-stadium-in-april-2027',
+    summary:
+      'The British-Filipino singer-songwriter steps up from a 2025 theatre show to a full Indoor Stadium date, touring her fuzzed-out, 90s-indebted guitar-pop catalogue across a wider Asia run.',
+    palette: 'violet',
+  },
   {
     id: 'bruno-mars-national-stadium',
     kind: 'music',
@@ -2050,6 +2125,25 @@ export const events: SGEvent[] = [
     palette: 'acid',
   },
   {
+    id: 'blast-premier-open-singapore-2027',
+    kind: 'sports',
+    scope: 'singapore',
+    title: 'BLAST Premier Open Singapore',
+    subtitle: 'Counter-Strike 2',
+    categories: ['esports'],
+    venue: 'Venue TBC',
+    area: 'Singapore',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2027-03-15',
+    endDate: '2027-03-28',
+    status: 'confirmed',
+    sourceUrl: 'https://www.thailand-business-news.com/pr-news/blast-premier-open-set-to-take-place-in-singapore-in-march-2027',
+    summary:
+      'BLAST’s third Singapore event under its multi-year Singapore Tourism Board partnership, and its first Open to run entirely on home soil rather than splitting legs with Copenhagen — 16 Counter-Strike 2 teams compete for a US$1.25 million prize pool. Venue yet to be announced.',
+    palette: 'ember',
+  },
+  {
     id: 'deutsche-bank-singapore-open-2027',
     kind: 'sports',
     scope: 'singapore',
@@ -2321,6 +2415,42 @@ export const events: SGEvent[] = [
     summary:
       'The DC-10 Ibiza institution decamps to a beach club north of Phuket, expanding to three consecutive Saturdays (Jan 9, 16 and 23) for 2027 after 2026’s two-weekend run sold more than 20,000 tickets. Underground house and techno with an Ibiza booking policy and no big-room concessions.',
     palette: 'sunset',
+  },
+  {
+    id: 'lalala-fest-jakarta-2027',
+    kind: 'music',
+    scope: 'regional',
+    title: 'LaLaLa Fest',
+    subtitle: 'Jakarta — Olivia Dean, Jungle, St. Vincent & more',
+    genres: ['festival', 'jazz-soul'],
+    venue: 'ICE BSD City',
+    area: 'Tangerang',
+    city: 'Jakarta',
+    country: 'Indonesia',
+    startDate: '2027-01-17',
+    status: 'confirmed',
+    sourceUrl: 'https://en.tempo.co/read/1827121/lalala-festival-makes-grand-return-to-jakarta-lineup-location-ticket-pricesindeks',
+    summary:
+      'The biggest of three one-day LaLaLa Fest editions across Southeast Asia in January 2027, with Olivia Dean, Jungle and St. Vincent topping a 14-act bill in a newly air-conditioned indoor hall outside Jakarta.',
+    palette: 'ocean',
+  },
+  {
+    id: 'lalala-fest-bangkok-2027',
+    kind: 'music',
+    scope: 'regional',
+    title: 'LaLaLa Fest',
+    subtitle: 'Bangkok — Olivia Dean, Jungle & more',
+    genres: ['festival', 'jazz-soul'],
+    venue: 'IMPACT Challenger Hall 3',
+    area: 'Muang Thong Thani',
+    city: 'Bangkok',
+    country: 'Thailand',
+    startDate: '2027-01-20',
+    status: 'confirmed',
+    sourceUrl: 'https://www.bkmagazine.com/article/olivia-dean-to-headline-thailands-first-lalala-festival-in-jan-2027/',
+    summary:
+      'LaLaLa Fest’s first-ever Thailand edition, closing out the brand’s three-country January run with Olivia Dean and Jungle headlining alongside Thai acts MILLI, KIKI and Cyndi Seui.',
+    palette: 'gold',
   },
   {
     id: 'siam-songkran-2027',
