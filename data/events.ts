@@ -59,7 +59,7 @@ import type { SGEvent } from '@/lib/types';
  */
 
 /** Date this dataset was last researched and verified. Shown in the UI. */
-export const LAST_UPDATED = '2026-10-12';
+export const LAST_UPDATED = '2026-10-19';
 
 export const events: SGEvent[] = [
   /* ==========================================================================
@@ -1547,6 +1547,26 @@ export const events: SGEvent[] = [
     palette: 'noir',
   },
   {
+    id: 'yousuke-yukimatsu-zouk',
+    kind: 'music',
+    scope: 'singapore',
+    title: '¥ØU$UK€ ¥UK1MAT$U',
+    subtitle: 'Zouk Singapore',
+    genres: ['house-techno-edm'],
+    venue: 'Zouk Singapore',
+    area: 'Clarke Quay',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2026-11-07',
+    time: '22:00',
+    status: 'confirmed',
+    priceFrom: 'S$60',
+    sourceUrl: 'https://thebeat.asia/singapore/the-list/events/zouk-presents-yenou-ukeur-yenuk1mat-u',
+    summary:
+      'The Osaka-born, Tokyo-based selector’s sets roam freely across techno, trance, ambient, experimental and bass — a résumé that stretches from Berghain and Berlin Atonal to Coachella and the Montreux Jazz Festival. Ferng supports.',
+    palette: 'noir',
+  },
+  {
     id: 'malcolm-todd-star-theatre',
     kind: 'music',
     scope: 'singapore',
@@ -1568,6 +1588,26 @@ export const events: SGEvent[] = [
   /* ==========================================================================
    * SINGAPORE — MUSIC — DECEMBER 2026
    * ========================================================================== */
+  {
+    id: '5-seconds-of-summer-star-theatre-dec',
+    kind: 'music',
+    scope: 'singapore',
+    title: '5 Seconds of Summer',
+    subtitle: 'Everyone’s a Star! World Tour — second show',
+    genres: ['rock-alternative', 'pop'],
+    venue: 'The Star Theatre',
+    area: 'Buona Vista',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2026-12-03',
+    time: '20:00',
+    status: 'confirmed',
+    priceFrom: 'S$128',
+    sourceUrl: 'https://www.eventworld.com/5-seconds-of-summer-singapore-tickets-03-12-2026/event/409951',
+    summary:
+      'A second Star Theatre date added after the 16 November show sold out — same Everyone’s a Star! World Tour, eight years overdue.',
+    palette: 'ember',
+  },
   {
     id: 'queens-of-the-stone-age-star-theatre',
     kind: 'music',
@@ -1862,6 +1902,26 @@ export const events: SGEvent[] = [
     palette: 'gold',
   },
 
+  {
+    id: 'sleeping-with-sirens-capitol-theatre',
+    kind: 'music',
+    scope: 'singapore',
+    title: 'Sleeping With Sirens',
+    subtitle: 'An Ending In Itself Tour — Asia 2027',
+    genres: ['rock-alternative'],
+    venue: 'Capitol Theatre',
+    area: 'City Hall',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2027-04-13',
+    status: 'confirmed',
+    ticketUrl: 'https://maiseat.com/',
+    sourceUrl: 'https://www.bandwagon.asia/articles/sleeping-with-sirens-to-play-singapore-kuala-lumpur-manila-in-april-2027-for-an-ending-in-itself-tour',
+    summary:
+      'The Florida post-hardcore-turned-pop-rock veterans make their Singapore debut as part of a three-city Asia run with Kuala Lumpur and Manila — a heavier, more emo-adjacent booking than most of this calendar.',
+    palette: 'noir',
+  },
+
   /* ==========================================================================
    * SINGAPORE — SPORTS
    * ========================================================================== */
@@ -2121,7 +2181,7 @@ export const events: SGEvent[] = [
     ticketUrl: 'https://www.hsbcgolf.com/womens/',
     sourceUrl: 'https://www.lpga.com/tournaments/hsbc-womens-world-championship/overview',
     summary:
-      'Known on tour as "Asia’s Major" — a small, elite field on Sentosa’s Tanjong course. Dates are projected from the 2026 edition and not yet confirmed for 2027.',
+      'Known on tour as "Asia’s Major" — a small, elite field on Sentosa’s Tanjong course. The LPGA\'s 2027 schedule (released October 2026) confirms the event stays on tour as part of an Asia swing with Thailand and a new Hong Kong stop, but exact 2027 dates and the order of that swing are not yet published.',
     palette: 'acid',
   },
   {
@@ -2200,6 +2260,26 @@ export const events: SGEvent[] = [
     palette: 'ember',
   },
   {
+    id: 'singapore-tennis-open-2027',
+    kind: 'sports',
+    scope: 'singapore',
+    title: 'Singapore Tennis Open',
+    subtitle: 'WTA 500, presented by BNP Paribas',
+    categories: ['tennis'],
+    venue: 'OCBC Arena, The Kallang',
+    area: 'Kallang',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2027-09-20',
+    endDate: '2027-09-26',
+    status: 'confirmed',
+    ticketUrl: 'https://www.wtatennis.com/tournament/1152/singapore/2027/overview',
+    sourceUrl: 'https://www.wtatennis.com/tournament/1152/singapore/2027/overview',
+    summary:
+      'The second edition at WTA 500 level, opening the WTA\'s Asian Swing on the OCBC Arena\'s indoor hard courts. A 28-player singles draw and 16-team doubles draw, with the 2026 comeback edition having already justified the tour\'s multi-year commitment through 2030.',
+    palette: 'ocean',
+  },
+  {
     id: 'fiba-3x3-world-cup-2027',
     kind: 'sports',
     scope: 'singapore',
@@ -2218,7 +2298,6 @@ export const events: SGEvent[] = [
       'Singapore hosts the world championship of Olympic 3x3 basketball — short games, a shot clock that never lets up, and a DJ courtside throughout. FIBA has confirmed the event for June 2027 with roughly 40 teams over seven days, but exact dates and venue are still to be announced.',
     palette: 'neon',
   },
-
   {
     id: 'f1-singapore-grand-prix-2027',
     kind: 'sports',
@@ -2414,6 +2493,25 @@ export const events: SGEvent[] = [
     sourceUrl: 'https://edmhousenetwork.com/circoloco-thailand-confirms-return-for-2027/',
     summary:
       'The DC-10 Ibiza institution decamps to a beach club north of Phuket, expanding to three consecutive Saturdays (Jan 9, 16 and 23) for 2027 after 2026’s two-weekend run sold more than 20,000 tickets. Underground house and techno with an Ibiza booking policy and no big-room concessions.',
+    palette: 'sunset',
+  },
+  {
+    id: 'lalala-fest-manila-2027',
+    kind: 'music',
+    scope: 'regional',
+    title: 'LaLaLa Fest',
+    subtitle: 'Manila — Olivia Dean, BINI, Lola Amour & more',
+    genres: ['festival', 'jazz-soul'],
+    venue: 'Philippine Arena',
+    area: 'Bocaue, Bulacan',
+    city: 'Manila',
+    country: 'Philippines',
+    startDate: '2027-01-14',
+    status: 'confirmed',
+    ticketUrl: 'https://www.ticketmelon.com/',
+    sourceUrl: 'https://thebeat.asia/manila/the-list/nightlife/lalala-fest-2027-lineup',
+    summary:
+      'The opening leg of LaLaLa Fest\'s three-country January run and Olivia Dean\'s Philippine concert debut, with BINI, Lola Amour, Sunkissed Lola and Up Dharma Down rounding out a five-act bill curated by promoter Wilbros Live.',
     palette: 'sunset',
   },
   {
