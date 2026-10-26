@@ -59,7 +59,7 @@ import type { SGEvent } from '@/lib/types';
  */
 
 /** Date this dataset was last researched and verified. Shown in the UI. */
-export const LAST_UPDATED = '2026-10-19';
+export const LAST_UPDATED = '2026-10-26';
 
 export const events: SGEvent[] = [
   /* ==========================================================================
@@ -1201,6 +1201,25 @@ export const events: SGEvent[] = [
       'Three progressive-and-melodic-house acts trade off across one night as part of Marquee\'s Halloween-week programming — a stacked bill rather than a single headliner.',
     palette: 'violet',
   },
+  {
+    id: 'zouk-play-dead-halloween-2026',
+    kind: 'music',
+    scope: 'singapore',
+    title: 'Zouk presents PLAY DEAD',
+    subtitle: 'Halloween Weekend — Bassjackers',
+    genres: ['house-techno-edm'],
+    venue: 'Zouk Singapore',
+    area: 'Clarke Quay',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2026-10-30',
+    endDate: '2026-10-31',
+    status: 'confirmed',
+    sourceUrl: 'https://littlebigreddot.com/?p=28726',
+    summary:
+      'Zouk’s two-night Halloween takeover opens with Dutch big-room duo Bassjackers headlining Friday, before a toy-nostalgia-themed Saturday spread across four transformed rooms — complete with a Best Dressed costume competition carrying over S$10,000 in prizes, S$5,000 of it cash.',
+    palette: 'noir',
+  },
 
   /* ==========================================================================
    * SINGAPORE — MUSIC — NOVEMBER 2026
@@ -2177,11 +2196,11 @@ export const events: SGEvent[] = [
     country: 'Singapore',
     startDate: '2027-02-25',
     endDate: '2027-02-28',
-    status: 'tbc',
+    status: 'confirmed',
     ticketUrl: 'https://www.hsbcgolf.com/womens/',
-    sourceUrl: 'https://www.lpga.com/tournaments/hsbc-womens-world-championship/overview',
+    sourceUrl: 'https://www.lpga.com/news/2026/lpga-tour-announces-2027-schedule',
     summary:
-      'Known on tour as "Asia’s Major" — a small, elite field on Sentosa’s Tanjong course. The LPGA\'s 2027 schedule (released October 2026) confirms the event stays on tour as part of an Asia swing with Thailand and a new Hong Kong stop, but exact 2027 dates and the order of that swing are not yet published.',
+      'Known on tour as "Asia’s Major" — a small, elite field on Sentosa’s Tanjong course. The LPGA\'s 2027 schedule, released 7 October 2026, locks in tournament week at Sentosa with a raised $3.10M purse, as part of a reshuffled Asia swing alongside Thailand and a new Hong Kong stop.',
     palette: 'acid',
   },
   {
@@ -2560,13 +2579,13 @@ export const events: SGEvent[] = [
     area: 'Huai Khwang',
     city: 'Bangkok',
     country: 'Thailand',
-    startDate: '2027-04-11',
-    endDate: '2027-04-14',
+    startDate: '2027-04-10',
+    endDate: '2027-04-13',
     status: 'tbc',
     ticketUrl: 'https://siamsongkran.info/',
-    sourceUrl: 'https://siamsongkran.info/',
+    sourceUrl: 'https://edmhousenetwork.com/siam-songkran-reveals-dates-and-theme-for-2027-edition/',
     summary:
-      'Bangkok’s enormous water-fight festival, run across the Songkran new year holiday with an international EDM lineup and hoses aimed at the crowd from the stage. Dates track the public holiday every year, so 11–14 April is a safe assumption ahead of confirmation.',
+      'Bangkok’s enormous water-fight festival, run across the Songkran new year holiday with an international EDM lineup and hoses aimed at the crowd from the stage. The 2027 edition, themed "LUMINARA", now has dates locked at Bravo BKK Arena — though the lineup is still unannounced.',
     palette: 'ocean',
   },
   {
