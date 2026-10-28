@@ -59,7 +59,7 @@ import type { SGEvent } from '@/lib/types';
  */
 
 /** Date this dataset was last researched and verified. Shown in the UI. */
-export const LAST_UPDATED = '2026-10-26';
+export const LAST_UPDATED = '2026-10-28';
 
 export const events: SGEvent[] = [
   /* ==========================================================================
@@ -1664,6 +1664,27 @@ export const events: SGEvent[] = [
     summary:
       'Indie-disco guitar pop on the lawn at Fort Canning — comfortably the best outdoor venue in the city for a show this size. Bring something to sit on.',
     palette: 'acid',
+  },
+  {
+    id: 'above-beyond-anjunabeats-warehouse-singapore',
+    kind: 'music',
+    scope: 'singapore',
+    title: 'Above & Beyond',
+    subtitle: 'Anjunabeats Warehouse — Asia debut',
+    genres: ['house-techno-edm'],
+    venue: 'Pasir Panjang Power Station',
+    area: 'Pasir Panjang',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2026-12-05',
+    time: '21:00',
+    status: 'confirmed',
+    ticketUrl: 'https://drop.cobrand.com/d/collective-minds/aboveandbeyond-sg-2026',
+    sourceUrl:
+      'https://www.bandwagon.asia/articles/above-beyond-bring-anjunabeats-warehouse-to-kuala-lumpur-singapore-this-december',
+    summary:
+      'The trance-and-progressive trio bring their Anjunabeats Warehouse concept to Asia for the first time, taking over a decommissioned 1950s power station on the southwest coast. Gabriel & Dresden, Spencer Brown and Blake.08 join them; it runs the night after a Kuala Lumpur edition.',
+    palette: 'violet',
   },
   {
     id: 'wolf-alice-fort-canning',

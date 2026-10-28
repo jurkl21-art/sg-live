@@ -92,6 +92,7 @@ Sources used for the current dataset:
 | Venues | Singapore Indoor Stadium, National Stadium, The Star Theatre, Capitol Theatre, Esplanade |
 | Sport | [singaporegp.sg](https://singaporegp.sg/en/), [LIV Golf](https://www.livgolf.com/), [SVNS](https://www.svns.com/en/events/singapore), [WTA](https://www.wtatennis.com/), LPGA, SportSG, [Tour de France Singapore Criterium](https://efgh.xyz/events/tour-de-france-efgh-singapore-criterium-2026) / [UCI Asia Tour](https://en.wikipedia.org/wiki/2026_UCI_Asia_Tour), [Football Association of Singapore](https://www.fas.org.sg/), [FIBA](https://fiba3x3.com/), [BWF World Tour](https://bwfworldtour.bwfbadminton.com/), [WTT](https://worldtabletennis.com/), [T100 Triathlon](https://t100triathlon.com/singapore/), [Evo Singapore](https://evosingapore.gg/) |
 | Clubs | [Zouk Group](https://zoukgroup.com/singapore/events/), Marquee Singapore, CÉ LA VI, [RA](https://ra.co/) |
+| Independent promoters / pop-up venues | RA's [Singapore city listings](https://ra.co/events/sg/singapore) (not just club pages), Collective Minds, Livescape, Bandsintown for Pasir Panjang Power Station and St James Power Station, [Bandwagon Asia](https://www.bandwagon.asia/) |
 | Regional festivals | Official sites for Tomorrowland Thailand, Wonderfruit, Djakarta Warehouse Project, CircoLoco, Siam Songkran, Maho Rasop |
 
 ### The data schema
