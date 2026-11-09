@@ -59,7 +59,7 @@ import type { SGEvent } from '@/lib/types';
  */
 
 /** Date this dataset was last researched and verified. Shown in the UI. */
-export const LAST_UPDATED = '2026-11-02';
+export const LAST_UPDATED = '2026-11-09';
 
 export const events: SGEvent[] = [
   /* ==========================================================================
@@ -1901,12 +1901,12 @@ export const events: SGEvent[] = [
     city: 'Singapore',
     country: 'Singapore',
     startDate: '2027-01-16',
-    endDate: '2027-01-17',
+    endDate: '2027-01-18',
     status: 'confirmed',
     priceFrom: 'S$138',
-    sourceUrl: 'https://www.asiaone.com/entertainment/singapore-concert-calendar-2027',
+    sourceUrl: 'https://www.misslobang.com/article/westlife-singapore-2027-third-show-18-january-tickets',
     summary:
-      'Two nights, the first already sold out. Key changes, stools, and a Southeast Asian audience that has never once let their popularity dip.',
+      'Three nights now, after the first two sold out and a third was added for 18 January. Key changes, stools, and a Southeast Asian audience that has never once let their popularity dip.',
     palette: 'ocean',
   },
 
