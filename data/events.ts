@@ -59,7 +59,7 @@ import type { SGEvent } from '@/lib/types';
  */
 
 /** Date this dataset was last researched and verified. Shown in the UI. */
-export const LAST_UPDATED = '2026-11-09';
+export const LAST_UPDATED = '2026-11-16';
 
 export const events: SGEvent[] = [
   /* ==========================================================================
@@ -1619,6 +1619,24 @@ export const events: SGEvent[] = [
     palette: 'noir',
   },
   {
+    id: 'dom-dolla-pasir-panjang-power-station',
+    kind: 'music',
+    scope: 'singapore',
+    title: 'Dom Dolla',
+    subtitle: 'Singapore debut',
+    genres: ['house-techno-edm'],
+    venue: 'Pasir Panjang Power Station',
+    area: 'Pasir Panjang',
+    city: 'Singapore',
+    country: 'Singapore',
+    startDate: '2026-11-27',
+    status: 'confirmed',
+    sourceUrl: 'https://www.timeout.com/singapore/news/dom-dolla-is-making-his-singapore-debut-at-pasir-panjang-power-station-082826',
+    summary:
+      'The Australian producer behind "Pump the Brakes" and "Saving Up" makes his long-awaited Singapore debut at the decommissioned power station — Collective Minds\' latest international coup for the venue, in the same lineage as Above & Beyond\'s Anjunabeats Warehouse there in December. Big-room house built for a warehouse-scale room.',
+    palette: 'acid',
+  },
+  {
     id: 'levi-marquee',
     kind: 'music',
     scope: 'singapore',
@@ -2743,16 +2761,16 @@ export const events: SGEvent[] = [
     scope: 'regional',
     title: 'Zamna Phuket',
     genres: ['festival', 'house-techno-edm'],
-    venue: 'Venue TBC',
-    area: 'Phuket',
+    venue: 'Yeden Gardens',
+    area: 'Phang Nga',
     city: 'Phuket',
     country: 'Thailand',
-    startDate: '2027-01-23',
-    endDate: '2027-01-24',
+    startDate: '2027-01-29',
+    endDate: '2027-01-30',
     status: 'confirmed',
-    sourceUrl: 'https://iflyer.tv/en/article/2026/05/29/zamna-phuket/',
+    sourceUrl: 'https://www.technoairlines.com/festival/zamna-phuket-thailand-2027',
     summary:
-      'The Tulum destination-festival brand’s first Phuket edition, following a smaller test event on Koh Samui earlier in 2026. Dates are locked in; the exact venue on the island has yet to be announced.',
+      'The Tulum destination-festival brand’s first Phuket edition, following a smaller test event on Koh Samui earlier in 2026. Now confirmed for Yeden Gardens in the Takua Thung district of Phang Nga, across the bridge from the island proper — later dates than first reported.',
     palette: 'sunset',
   },
   {
